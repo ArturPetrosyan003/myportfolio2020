@@ -13,3 +13,6 @@ button{
     outline: none;
     cursor: pointer;
 }
+image{
+    animation-name: none!important;
+}

@@ -4,9 +4,10 @@ import Home from './components/Home';
 import About from './components/About';
 import Skills from './components/Skills';
 import Works from './components/Works';
-import Contacts from './components/Contacts';
+import Contact from './components/Contact';
 
 import './assets/style/style.css';
+import ToTopBtn from './components/UI/ToTopBtn';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       <About/>
       <Skills/>
       <Works/>
-      <Contacts/>
+      <Contact/>
+      <ToTopBtn/>
     </div>
   );
 }

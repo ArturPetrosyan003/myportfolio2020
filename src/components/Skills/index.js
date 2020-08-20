@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import THEME from '../../assets/theme/theme';
 import Indicator from '../UI/Indicator';
+import PageName from '../UI/PageName';
 
 
 class Skills extends Component {
@@ -9,7 +9,7 @@ class Skills extends Component {
     render() {
         return (
             <div id='skills' style={{ width: '100%', paddingTop: '80px', boxSizing: 'border-box', overflow: 'auto'}}>
-                <div style={{ width: '289px', height: '61px', background: THEME.orange, color: THEME.white, textAlign: 'center', fontSize: 30, paddingTop: '9px', boxSizing: 'border-box' }}>Skills</div>
+                <PageName name='Skills'/>
 
                 <div style={{ width: '100%', marginTop: '50px', marginBottom: '50px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', overflow: 'hidden'}}>
                     <Indicator name='Html' percent='90'/>

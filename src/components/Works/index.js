@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import THEME from '../../assets/theme/theme';
 import SingleProject from '../UI/SingleProject';
+import PageName from '../UI/PageName';
 
 import TPM from '../../assets/images/TPM.png';
 import MCity from '../../assets/images/m_city.png';
@@ -13,7 +13,7 @@ class Works extends Component {
     render() {
         return (
             <div id='works' style={{ width: '100%', height: '100vh', paddingTop: '80px', boxSizing: 'border-box', overflow: 'hidden', cursor: 'pointer'}}>
-                <div style={{ width: '289px', height: '61px', background: THEME.orange, color: THEME.white, textAlign: 'center', fontSize: 30, paddingTop: '9px', boxSizing: 'border-box' }}>Works</div>
+                <PageName name='Works'/>
                 <div style={{width: '100%', height: '90%', display: 'flex', justifyContent: 'flex-start', alignItems: 'center', flexWrap: 'wrap', margin: 'auto', paddingLeft: '200px'}}>
                     <SingleProject title="The Pyramid Mystery" image={TPM}/>
                     <SingleProject title="Man City WebSite" image={MCity}/>
