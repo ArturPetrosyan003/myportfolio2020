@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.95cabc04.chunk.css",
+    "main.js": "/static/js/main.ea6ce52d.chunk.js",
+    "main.js.map": "/static/js/main.ea6ce52d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
+    "static/js/2.b8561ee3.chunk.js": "/static/js/2.b8561ee3.chunk.js",
+    "static/js/2.b8561ee3.chunk.js.map": "/static/js/2.b8561ee3.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.3db49e096a660fe0ee2cc0efdafc8b3c.js": "/precache-manifest.3db49e096a660fe0ee2cc0efdafc8b3c.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.95cabc04.chunk.css.map": "/static/css/main.95cabc04.chunk.css.map",
+    "static/js/2.b8561ee3.chunk.js.LICENSE.txt": "/static/js/2.b8561ee3.chunk.js.LICENSE.txt",
+    "static/media/TPM.png": "/static/media/TPM.187455b9.png",
+    "static/media/about.jpg": "/static/media/about.1753e129.jpg",
+    "static/media/facebook.png": "/static/media/facebook.7c8d991e.png",
+    "static/media/github.png": "/static/media/github.b37b05a7.png",
+    "static/media/instagram.png": "/static/media/instagram.4f7cb5fb.png",
+    "static/media/laravel.png": "/static/media/laravel.f1329be0.png",
+    "static/media/m_city.png": "/static/media/m_city.889edfd1.png",
+    "static/media/profile.png": "/static/media/profile.4db6a25b.png",
+    "static/media/the_venue.png": "/static/media/the_venue.a8099d45.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.19ccc7f6.js",
+    "static/js/2.b8561ee3.chunk.js",
+    "static/css/main.95cabc04.chunk.css",
+    "static/js/main.ea6ce52d.chunk.js"
+  ]
+}
