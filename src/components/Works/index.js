@@ -9,16 +9,16 @@ import Venue from '../../assets/images/the_venue.png';
 import Laravel from '../../assets/images/laravel.png';
 
 class Works extends Component {
-
     render() {
         return (
-            <div id='works' style={{ width: '100%', height: '100vh', paddingTop: '80px', boxSizing: 'border-box', overflow: 'hidden', cursor: 'pointer'}}>
-                <PageName name='Works'/>
-                <div style={{width: '100%', height: '90%', display: 'flex', justifyContent: 'flex-start', alignItems: 'center', flexWrap: 'wrap', margin: 'auto', paddingLeft: '200px'}}>
-                    <SingleProject title="The Pyramid Mystery" image={TPM}/>
-                    <SingleProject title="Man City WebSite" image={MCity}/>
-                    <SingleProject title="The Venue" image={Venue}/>
-                    <SingleProject title="Shop Prototype" image={Laravel}/>
+            <div id='projects'>
+                <PageName name='Projects' />
+
+                <div className='projects_container'>
+                    <SingleProject id={1} title="The Pyramid Mystery" image={TPM} />
+                    <SingleProject id={2} title="Man City WebSite" image={MCity} />
+                    <SingleProject id={3} title="The Venue" image={Venue} />
+                    <SingleProject id={4} title="Shop Prototype" image={Laravel} />
                     {/* <SingleProject title="The Pyramid Mystery" image='https://static.toiimg.com/thumb/72975551.cms?width=680&height=512&imgsize=881753'/>
                     <SingleProject title="The Pyramid Mystery" image='https://static.toiimg.com/thumb/72975551.cms?width=680&height=512&imgsize=881753'/> */}
                 </div>

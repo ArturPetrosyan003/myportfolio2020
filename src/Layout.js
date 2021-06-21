@@ -6,10 +6,10 @@ import Skills from './components/Skills';
 import Works from './components/Works';
 import Contact from './components/Contact';
 
-import './assets/style/style.css';
 import ToTopBtn from './components/UI/ToTopBtn';
+import './assets/style/style.css';
 
-function App() {
+const Layout = () => {
   return (
     <div className="App">
       <Home/>
@@ -22,4 +22,4 @@ function App() {
   );
 }
 
-export default App;
+export default Layout;
