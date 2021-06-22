@@ -6,7 +6,7 @@ import Layout from './Layout';
 import ProjectInfo from './components/UI/ProjectInfo';
 import NotFound from './components/UI/404';
 
-const Routes = (props) => {
+const Routes = () => {
     return (
         <div>
             <Switch>

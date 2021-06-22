@@ -28,16 +28,20 @@ class SingleProject extends Component {
                 }
             }}>
                 <Zoom duration={1000}>
-                    <div style={{ width: '338px', height: '184px', borderRadius: 20, overflow: 'hidden', marginRight: '50px', cursor: 'pointer' }} onMouseEnter={() => this.hoverEffect()} onMouseLeave={() => this.hoverEffect()}>
-                        <Fade when={this.state.hover}>
-                            <div style={{ width: '338px', height: '184px', borderRadius: 20, background: 'rgba(0, 0, 0, 0.5)', zIndex: 9, position: 'absolute' }}>
-                                <Fade bottom when={this.state.hover}>
-                                    <p style={{ textAlign: 'center', color: 'white', fontSize: '30px' }}>{this.props.title}</p>
-                                    <hr style={{ width: '80%', background: 'white', height: '1px', border: 'none', marginTop: '-20px' }}></hr>
+                    <div
+                        className='project_item'
+                        onMouseEnter={() => this.hoverEffect()}
+                        onMouseLeave={() => this.hoverEffect()}
+                    >
+                        <Fade duration={700} when={this.state.hover}>
+                            <div className='cover'>
+                                <Fade bottom duration={700} when={this.state.hover}>
+                                    <p>{this.props.title}</p>
+                                    <hr />
                                 </Fade>
                             </div>
                         </Fade>
-                        <img src={this.props.image} style={{ width: '100%', height: '100%' }} />
+                        <img src={this.props.image} />
                     </div>
                 </Zoom>
             </Link>

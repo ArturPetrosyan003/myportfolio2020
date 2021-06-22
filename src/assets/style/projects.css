@@ -1,0 +1,59 @@
+/* Projects */
+
+#projects {
+    width: 100%;
+    height: 100vh;
+    background: var(--dark-grey);
+    padding-top: 80px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.projects_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    padding-left: 15%;
+}
+
+/* Project Item */
+
+.project_item {
+    width: 338px;
+    height: 184px;
+    border-radius: 20px;
+    margin-right: 50px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.project_item .cover {
+    width: 338px;
+    height: 184px;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    border-radius: 20px;
+    z-index: 9;
+}
+
+.project_item .cover p {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.project_item .cover hr {
+    width: 80%;
+    height: 1px;
+    background: white;
+    border: none;
+}
+
+.project_item img {
+    width: 100%;
+    height: 100%;
+}

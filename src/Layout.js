@@ -12,12 +12,12 @@ import './assets/style/style.css';
 const Layout = () => {
   return (
     <div className="App">
-      <Home/>
-      <About/>
-      <Skills/>
-      <Works/>
-      <Contact/>
-      <ToTopBtn/>
+      <Home />
+      <About />
+      <Skills />
+      <Works />
+      <Contact />
+      <ToTopBtn />
     </div>
   );
 }

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import THEME from '../../assets/theme/theme';
-
 import ProfileImage from '../../assets/images/profile-pic.png';
 import FB from '../../assets/icons/facebook.png';
 import Instagram from '../../assets/icons/instagram.png';

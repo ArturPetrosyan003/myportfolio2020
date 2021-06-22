@@ -1,7 +1,7 @@
 const data = [
     {
         id: 1,
-        platform: 'android',
+        platform: 'mobile',
         duration: '1.5 mo',
         url: 'https://play.google.com/store/apps/details?id=com.BlockGames.TPM',
         description: 'The Pyramid Mystery is an adventure/puzzle android game made with Unity. It consists of 2 chapters. I used modern technologies such as AI and game storytelling to create the game. Enjoy playing :)',
