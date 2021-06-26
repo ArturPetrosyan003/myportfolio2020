@@ -14,14 +14,16 @@ class About extends Component {
 
                 <Fade duration={1500}>
                     <div className='about_container'>
-                        <img src={AboutImg} />
+                        <div className='about_content'>
+                            <img src={AboutImg} />
 
-                        <div style={{ marginLeft: '70px' }}>
-                            <h1>I'm Artur</h1>
-                            
-                            <p style={{ fontSize: 24, width: '700px' }}>
-                                web/game/app developer. Have 4+ years of experience in programming area. In that period I have created many projects and worked for several companies. I like to create interesting projects anytime, so contact me as soon as You want and we'll create something interesting :)
-                            </p>
+                            <div>
+                                <h1>I'm Artur</h1>
+
+                                <p style={{ fontSize: 24, width: '700px' }}>
+                                    web/game/app developer. Have 4+ years of experience in programming area. In that period I have created many projects and worked for several companies. I like to create interesting projects anytime, so contact me as soon as You want and we'll create something interesting :)
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </Fade>

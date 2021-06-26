@@ -14,8 +14,20 @@
     height: 100%;
     color: var(--white);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+
+.about_container .about_content {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 15px;
+    border-radius: 20px;
+    border: 5px solid var(--coral);
 }
 
 .about_container img {
