@@ -18,7 +18,7 @@ class About extends Component {
                             <img src={AboutImg} />
 
                             <div>
-                                <h1>I'm Artur</h1>
+                                <h1>I'm <span>Artur</span></h1>
 
                                 <p style={{ fontSize: 24, width: '700px' }}>
                                     web/game/app developer. Have 4+ years of experience in programming area. In that period I have created many projects and worked for several companies. I like to create interesting projects anytime, so contact me as soon as You want and we'll create something interesting :)

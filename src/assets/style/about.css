@@ -30,6 +30,10 @@
     border: 5px solid var(--coral);
 }
 
+.about_container .about_content h1 span {
+    color: var(--coral);
+}
+
 .about_container img {
     width: 240px;
     height: 240px;

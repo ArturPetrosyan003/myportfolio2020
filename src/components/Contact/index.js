@@ -42,30 +42,34 @@ const Contact = () => {
                 <div className='contact_container'>
                     <Fade duration={1500}>
                         <form id='form' onSubmit={sendEmail}>
-                            <Slide left delay={0} duration={1000}>
-                                <input className='input' name='subject' type='text' placeholder='Subject:' /><br />
-                            </Slide>
+                            <div>
+                                <Slide left delay={0} duration={1000}>
+                                    <input className='input' name='subject' type='text' placeholder='Subject:' /><br />
+                                </Slide>
 
-                            <Slide left delay={200} duration={1000}>
-                                <input className='input' name='email' type='email' placeholder='Email:' /><br />
-                            </Slide>
+                                <Slide left delay={200} duration={1000}>
+                                    <input className='input' name='email' type='email' placeholder='Email:' /><br />
+                                </Slide>
+                            </div>
 
-                            <Slide left delay={400} duration={1000}>
-                                <textarea className='input' name='message' placeholder='Message:' ></textarea><br />
-                            </Slide>
+                            <div className='form_right'>
+                                <Slide left duration={1000}>
+                                    <textarea className='input' name='message' placeholder='Message:' ></textarea><br />
+                                </Slide>
 
-                            <p
-                                className='info_text'
-                                style={{
-                                    color: errorText == 'Email Sent' ? 'green' : 'red'
-                                }}
-                            >
-                                {errorText}
-                            </p>
+                                <p
+                                    className='info_text'
+                                    style={{
+                                        color: errorText == 'Email Sent' ? 'green' : 'red'
+                                    }}
+                                >
+                                    {errorText}
+                                </p>
 
-                            <Slide left delay={0} duration={1000}>
-                                <input className='send_button' type='submit' />
-                            </Slide>
+                                <Slide right duration={1000}>
+                                    <input className='send_button' type='submit' />
+                                </Slide>
+                            </div>
                         </form>
                     </Fade>
                 </div>
