@@ -1,7 +1,13 @@
 :root {
+    /* colors */
     --coral: #ed5c5c;
     --white: #fff;
     --black: #000;
     --light-grey: #bbbbbb;
-    --dark-grey: #292929;
+    --dark-grey: hsl(0, 0%, 16%);
+
+    /* fonts */
+    --Dosis: 'Dosis', sans-serif;
+    --Merriweather: 'Merriweather Sans', sans-serif;
+    --Anton: 'Anton', sans-serif;
 }

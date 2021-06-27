@@ -34,13 +34,13 @@
 }
 
 .contact_button {
-    width: 173px;
-    height: 43px;
+    width: 170px;
+    height: 45px;
     color: var(--white);
     background: var(--coral);
     font-size: 21px;
     border: none;
-    border-radius: 20px;
+    border-radius: 25px;
     box-shadow: none;
 }
 

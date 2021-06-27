@@ -14,6 +14,7 @@
     top: 10%;
     left: 92%;
     transform: rotate(-90deg);
+    overflow: hidden;
 }
 
 .back_button button img {
@@ -56,6 +57,32 @@
     margin-right: 12px;
 }
 
+.image_container .url_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    padding-left: 65px;
+    box-sizing: border-box;
+}
+
+.image_container .url_container button{
+    width: 170px;
+    height: 45px;
+    color: var(--white);
+    background: var(--coral);
+    font-size: 21px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: none;
+}
+
+.image_container .url_container img {
+    width: 45px;
+    height: 45px;
+    margin-left: 20px;
+}
+
 .info_container {
     width: 500px;
     display: flex;
@@ -67,11 +94,19 @@
 .info_container .icon_container {
     width: 220px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
     margin-top: 50px;
 }
 
-.info_container .icon_container p {
-    font-family: 'Anton', sans-serif;
+.info_container .icon_container span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info_container .icon_container span p {
+    font-family: var(--Anton);
+    margin: 10px 0px;
 }

@@ -1,11 +1,13 @@
 import React from 'react';
 import PageName from './PageName';
 
-import mobile from '../../assets/icons/mobile.png';
-import web from '../../assets/icons/web.png';
-import link from '../../assets/icons/link.png';
-import linkNull from '../../assets/icons/linkNull.png';
-import arrow from '../../assets/icons/arrow.png';
+import Mobile from '../../assets/icons/mobile.png';
+import Web from '../../assets/icons/web.png';
+import Github from '../../assets/icons/github.png';
+import Arrow from '../../assets/icons/arrow.png';
+
+import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
 
 import data from '../../projects';
 
@@ -15,37 +17,66 @@ const ProjectInfo = (props) => {
             <PageName name={props.data.title} />
 
             <div className='top_button back_button'>
-                <a href='/#works'>
-                    <button>
-                        <img src={arrow} />
+                <Slide bottom>
+                    <button onClick={() => window.history.back()}>
+                        <img src={Arrow} />
                     </button>
-                </a>
+                </Slide>
             </div >
 
             <div className='single_project_container'>
                 <div className='image_container'>
-                    <img className='main_image' src={props.data.image} />
+                    <Slide left>
+                        <img className='main_image' src={props.data.image} />
 
-                    <div className='small_image_container'>
-                        <img src={data[props.data.id - 1].images[0]} />
-                        <img src={data[props.data.id - 1].images[1]} />
-                        <img src={data[props.data.id - 1].images[2]} />
-                    </div>
+                        <div className='small_image_container'>
+                            <img src={data[props.data.id - 1].images[0]} />
+                            <img src={data[props.data.id - 1].images[1]} />
+                            <img src={data[props.data.id - 1].images[2]} />
+                        </div>
+                    </Slide>
+
+                    <Slide bottom>
+                        <div className='url_container'>
+                            <a href={data[props.data.id - 1].url} target='_blank'>
+                                <button>Visit Site</button>
+                            </a>
+
+                            <a href={data[props.data.id - 1].github} target='_blank'>
+                                <img
+                                    src={Github}
+                                    style={{
+                                        opacity: data[props.data.id - 1].github == null ? 0.3 : 1
+                                    }}
+                                />
+                            </a>
+                        </div>
+                    </Slide>
                 </div>
+
 
                 {
                     data.map((i, index) => {
                         return (
                             i.id == props.data.id ?
                                 <div key={index} className='info_container'>
-                                    <p>{i.description}</p>
-                                    <div className='icon_container'>
-                                        <img src={i.platform == 'mobile' ? mobile : web} style={{ width: 50, height: 50 }} />
-                                        <p>{i.duration}</p>
-                                        <a href={i.url}>
-                                            <img src={i.url != null ? link : linkNull} style={{ width: 40, height: 40 }} />
-                                        </a>
-                                    </div>
+                                    <Fade duration={2500}>
+                                        <p>{i.description}</p>
+                                    </Fade>
+
+                                    <Slide bottom>
+                                        <div className='icon_container'>
+                                            <span>
+                                                <p>Platform</p>
+                                                <img src={i.platform == 'Mobile' ? Mobile : Web} style={{ width: 50, height: 50 }} />
+                                            </span>
+
+                                            <span>
+                                                <p>Duration</p>
+                                                <p>{i.duration}</p>
+                                            </span>
+                                        </div>
+                                    </Slide>
                                 </div>
                                 : null
                         )

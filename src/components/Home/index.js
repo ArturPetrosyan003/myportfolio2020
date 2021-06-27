@@ -47,7 +47,7 @@ class Home extends Component {
 
                         <Zoom duration={1000}>
                             <div className='icon_container'>
-                                <a target='_blank' href='https://www.facebook.com/artur.petrosyan.56481379'>
+                                <a target='_blank' href='https://www.facebook.com/artur.petrosyan03'>
                                     <img className='icon' src={FB} />
                                 </a>
 

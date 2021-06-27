@@ -3,15 +3,15 @@
 #skills {
     width: 100%;
     background: var(--dark-grey);
-    padding-top: 80px;
+    padding-top: 50px;
     box-sizing: border-box;
     overflow: auto;
 }
 
 .skills_container {
     width: 100%;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 150px;
+    margin-bottom: 150px;
     display: flex;
     flex-direction: row;
     justify-content: center;
