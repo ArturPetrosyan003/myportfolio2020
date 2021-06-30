@@ -1,4 +1,4 @@
-1. review texts
+1. review texts +
 2. add hovers
 3. add new project
 4. change image on click (single project)

@@ -18,7 +18,7 @@ const data = [
         duration: '1 mo',
         url: 'https://m-city-453a6.firebaseapp.com/',
         github: null,
-        description: 'THIS WEBSITE IS UDEMY COURSE PROJECT. It is about football team Manchester City and created with React Js and uses Firebase DB and hosting. It also has admin dashboard with login system (Firebase auth). In website are shown information about team, matches and players. Also it has a lot of animations. Enjoy! :)',
+        description: 'THIS WEBSITE IS UDEMY COURSE PROJECT. It is about football team Manchester City and created with React Js and uses Firebase DB and hosting. It also has admin dashboard with login system (Firebase auth). In website is shown the information about the team, matches and players with a lot of animations.',
         images: [
             require('./assets/images/MCity/01.png'),
             require('./assets/images/MCity/02.png'),
@@ -31,7 +31,7 @@ const data = [
         duration: '2 wk',
         url: 'http://glorious.surge.sh/',
         github: null,
-        description: 'THIS WEBSITE IS UDEMY COURSE PROJECT. It is about the musical event. The website is simple and created with React Js. Enjoy! :)',
+        description: 'THIS WEBSITE IS UDEMY COURSE PROJECT. It is about a musical event. The website is created with React Js but it is very simple.',
         images: [
             require('./assets/images/Venue/01.png'),
             require('./assets/images/Venue/02.png'),
@@ -44,7 +44,7 @@ const data = [
         duration: '3 wk',
         url: null,
         github: null,
-        description: 'This is online shop prototype created with Laravel. It has admin dashboard, login/registration system and account page with card. It is not deployed anywhere :)',
+        description: 'This is online shop prototype created with Laravel. It has admin dashboard, login/registration system and account page with card. It is not deployed anywhere.',
         images: [
             require('./assets/images/Laravel/01.png'),
             require('./assets/images/Laravel/02.png'),

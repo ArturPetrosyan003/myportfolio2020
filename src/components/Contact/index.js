@@ -7,10 +7,14 @@ import Slide from 'react-reveal/Slide';
 
 const Contact = () => {
 
-    const [errorText, setErrorText] = useState(' ');
+    const [errorText, setErrorText] = useState('');
+    const [loading, setLoading] = useState(false);
+
 
     const sendEmail = async (event) => {
         event.preventDefault();
+        setLoading(true);
+
         const data = new FormData(event.target);
 
         const email = {
@@ -28,9 +32,11 @@ const Contact = () => {
         if (response.status == 200) {
             document.getElementById('form').reset();
             setErrorText('Email Sent');
+            setLoading(false);
         }
         else if (response.status == 400) {
             setErrorText('Something went wrong');
+            setLoading(false);
         }
     }
 
@@ -44,30 +50,38 @@ const Contact = () => {
                         <form id='form' onSubmit={sendEmail}>
                             <div>
                                 <Slide left delay={0} duration={1000}>
-                                    <input className='input' name='subject' type='text' placeholder='Subject:' /><br />
+                                    <input className='input' name='subject' type='text' placeholder='Subject:' required /><br />
                                 </Slide>
 
                                 <Slide left delay={200} duration={1000}>
-                                    <input className='input' name='email' type='email' placeholder='Email:' /><br />
+                                    <input className='input' name='email' type='email' placeholder='Email:' required /><br />
                                 </Slide>
                             </div>
 
                             <div className='form_right'>
                                 <Slide left duration={1000}>
-                                    <textarea className='input' name='message' placeholder='Message:' ></textarea><br />
+                                    <textarea className='input' name='message' placeholder='Message:' required></textarea><br />
                                 </Slide>
 
                                 <p
-                                    className='info_text'
+                                    className='error_text'
                                     style={{
-                                        color: errorText == 'Email Sent' ? 'green' : 'red'
+                                        color: errorText == 'Email Sent' ? '#40d96f' : '#ff5959'
                                     }}
                                 >
                                     {errorText}
                                 </p>
 
                                 <Slide right duration={1000}>
-                                    <input className='send_button' type='submit' />
+                                    <input
+                                        className='send_button'
+                                        type='submit'
+                                        value={loading == true ? 'Sending...' : 'Send'}
+                                        disabled={loading == true ? true : false}
+                                        style={{
+                                            cursor: loading == true ? 'default' : 'pointer'
+                                        }}
+                                    />
                                 </Slide>
                             </div>
                         </form>

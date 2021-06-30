@@ -21,7 +21,11 @@ class About extends Component {
                                 <h1>I'm <span>Artur</span></h1>
 
                                 <p style={{ fontSize: 24, width: '700px' }}>
-                                    web/game/app developer. Have 4+ years of experience in programming area. In that period I have created many projects and worked for several companies. I like to create interesting projects anytime, so contact me as soon as You want and we'll create something interesting :)
+                                    web/game/app developer. Have 3+ years of experience in programming area. 
+                                    In that period I have created many interesting projects and have 2 games available in Play Store. 
+                                    Studied in Tumo Center and learnt many interesting things by myself.
+                                    I like to study anytime and interested in every area of programming, but the main area is web/app development.
+
                                 </p>
                             </div>
                         </div>
