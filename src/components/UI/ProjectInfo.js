@@ -29,7 +29,12 @@ const ProjectInfo = (props) => {
                     <Slide left>
                         <img className='main_image' src={props.data.image} />
 
-                        <div className='small_image_container'>
+                        <div
+                            className='small_image_container'
+                            style={{
+                                visibility: data[props.data.id - 1].images.length == 0 ? 'hidden' : 'visible'
+                            }}
+                        >
                             <img src={data[props.data.id - 1].images[0]} />
                             <img src={data[props.data.id - 1].images[1]} />
                             <img src={data[props.data.id - 1].images[2]} />
@@ -39,7 +44,14 @@ const ProjectInfo = (props) => {
                     <Slide bottom>
                         <div className='url_container'>
                             <a href={data[props.data.id - 1].url} target='_blank'>
-                                <button>Visit Site</button>
+                                <button
+                                    style={{
+                                        opacity: data[props.data.id - 1].url == null ? 0.3 : 1,
+                                        cursor: data[props.data.id - 1].url == null ? 'default' : 'pointer'
+                                    }}
+                                >
+                                    Visit Site
+                                </button>
                             </a>
 
                             <a href={data[props.data.id - 1].github} target='_blank'>
@@ -68,7 +80,7 @@ const ProjectInfo = (props) => {
                                         <div className='icon_container'>
                                             <span>
                                                 <p>Platform</p>
-                                                <img src={i.platform == 'Mobile' ? Mobile : Web} style={{ width: 50, height: 50 }} />
+                                                <img src={i.platform == 'mobile' ? Mobile : Web} style={{ width: 50, height: 50 }} />
                                             </span>
 
                                             <span>

@@ -13,11 +13,11 @@ class Skills extends Component {
                     <div className='skill_row'>
                         <Indicator name='Html' percent='90' />
                         <Indicator name='Css' percent='90' />
-                        <Indicator name='Js' percent='80' />
-                        <Indicator name='React' percent='80' />
-                        <Indicator name='React Native' percent='75' />
+                        <Indicator name='Js' percent='85' />
+                        <Indicator name='React' percent='85' />
+                        <Indicator name='React Native' percent='80' />
                         <Indicator name='Node Js' percent='50' />
-                        <Indicator name='Php' percent='45' />
+                        <Indicator name='Php' percent='30' />
                     </div>
                     
                     <div className='skill_row'>
