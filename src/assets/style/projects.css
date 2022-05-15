@@ -18,8 +18,8 @@
     flex-wrap: wrap;
 }
 
-.projects_container h2 {
-    color: var(--white);
+.projects_container h3 {
+    color: var(--light-grey);
 }
 
 /* Project Item */

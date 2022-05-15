@@ -31,6 +31,10 @@
 
 .home_container img {
     width: 320px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .contact_button {

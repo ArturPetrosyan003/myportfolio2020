@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import AboutImg from '../../assets/images/profile-pic.png';
+import AboutImg from '../../assets/images/profile-pic.jpg';
 
 import PageName from '../UI/PageName';
 
@@ -18,14 +18,14 @@ class About extends Component {
                             <img src={AboutImg} />
 
                             <div>
-                                <h1>I'm <span>Artur</span></h1>
+                                {/* <h1>I'm <span>Artur</span></h1> */}
 
                                 <p style={{ fontSize: 24, width: '700px' }}>
                                     web/game/app developer. Have 3+ years of experience in programming area. 
                                     In that period I have created many interesting projects and have 2 games available in Play Store. 
                                     Studied in Tumo Center and learnt many interesting things by myself.
+                                    Currently work in "The Software Development Company" as Software Engineer.
                                     I like to study anytime and interested in every area of programming, but the main area is web/app development.
-
                                 </p>
                             </div>
                         </div>
