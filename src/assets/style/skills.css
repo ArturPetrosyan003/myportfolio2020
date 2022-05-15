@@ -52,7 +52,7 @@
 .indicator_line span {
     height: 100%;
     display: block;
-    background: var(--coral);
+    background: var(--yellow);
     border-radius: 20px;
 }
 

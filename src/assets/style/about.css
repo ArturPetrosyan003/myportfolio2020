@@ -27,11 +27,11 @@
     justify-content: center;
     padding: 25px 15px;
     border-radius: 20px;
-    border: 5px solid var(--coral);
+    border: 5px solid var(--yellow);
 }
 
 .about_container .about_content h1 span {
-    color: var(--coral);
+    color: var(--yellow);
 }
 
 .about_container img {

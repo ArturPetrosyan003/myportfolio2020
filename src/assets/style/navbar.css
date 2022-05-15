@@ -34,7 +34,7 @@
     left: 0px;
     top: 0%;
     display: block;
-    background: var(--coral);
+    background: var(--yellow);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.5s;

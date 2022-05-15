@@ -9,7 +9,7 @@
 }
 
 .not_found p {
-    color: var(--coral);
+    color: var(--yellow);
     font-size: 80px;
 }
 
@@ -26,7 +26,7 @@
     width: 60px;
     height: 60px;
     color: var(--white);
-    background: var(--coral);
+    background: var(--yellow);
     font-size: 30px;
     border: none;
     border-radius: 100%;
@@ -44,7 +44,7 @@
     width: 290px;
     height: 60px;
     color: var(--white);
-    background: var(--coral);
+    background: var(--yellow);
     font-size: 25px;
     font-family: var(--Anton);
     letter-spacing: 1px;
