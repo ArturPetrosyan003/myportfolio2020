@@ -26,14 +26,14 @@ class Works extends Component {
             <SingleProject id={2} title="Man City WebSite" image={MCity} />
             <SingleProject id={3} title="The Venue" image={Venue} />
             <SingleProject id={4} title="Shop Prototype" image={Laravel} />
-
-            <Fade>
-              <h3>
-                Some projects are not listed because of some issues however they can
-                be shown.
-              </h3>
-            </Fade>
           </div>
+
+          <Fade>
+            <h3>
+              Some projects are not listed because of some issues however they can
+              be shown.
+            </h3>
+          </Fade>
         </div>
       </>
     );
