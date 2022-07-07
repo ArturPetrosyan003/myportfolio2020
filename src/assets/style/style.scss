@@ -1,0 +1,36 @@
+@import './navbar.scss';
+@import './home.scss';
+@import './about.scss';
+@import './contact.scss';
+@import './skills.scss';
+@import './projects.scss';
+@import './career.scss';
+@import './UI.scss';
+@import './single.scss';
+@import '../theme/theme.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Ubuntu+Condensed&display=swap');
+
+* {
+    font-family: var(--Roboto);
+    overflow-x: hidden;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+}
+
+image {
+    animation-name: none!important;
+}

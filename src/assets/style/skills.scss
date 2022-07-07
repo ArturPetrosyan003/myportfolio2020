@@ -1,0 +1,59 @@
+/* Skills */
+
+#skills {
+    width: 100%;
+    background: var(--dark-grey);
+    padding-top: 50px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.skills_container {
+    width: 100%;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.skill_row {
+   overflow: hidden;
+}
+
+/* Skill Indicator */
+
+.indicator {
+    display: flex;
+    align-items: center;
+    margin-bottom: -20px;
+}
+
+.indicator_label {
+    width: 120px;
+    text-align: right;
+    margin-right: 18px;
+}
+
+.indicator_label p {
+    color: var(--light-grey);
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.indicator_line {
+    width: 550px;
+    height: 18px;
+    background: var(--indicator-bg);
+    border-radius: 20px;
+}
+
+.indicator_line span {
+    height: 100%;
+    display: block;
+    background: var(--yellow);
+    border-radius: 20px;
+}
+

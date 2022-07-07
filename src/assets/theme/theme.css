@@ -1,13 +1,18 @@
 :root {
     /* colors */
-    --yellow: #E9A200;
+    --yellow: #efa700;
     --white: #fff;
     --black: #000;
     --light-grey: #bbbbbb;
     --dark-grey: hsl(0, 0%, 16%);
+    --form-bg: rgba(46, 46, 46, 0.95);
+    --navbar: #191919;
+    --indicator-bg: #bbbbbb;
 
     /* fonts */
     --Dosis: 'Dosis', sans-serif;
     --Merriweather: 'Merriweather Sans', sans-serif;
     --Anton: 'Anton', sans-serif;
+    --Roboto: 'Roboto', sans-serif;
+    --Ubuntu: 'Ubuntu Condensed', sans-serif;
 }

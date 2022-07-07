@@ -1,0 +1,53 @@
+/* Navbar */
+
+.MuiPaper-root {
+    height: 12%;
+    background: var(--navbar) !important;
+    box-shadow: none !important;
+    position: absolute !important;
+    justify-content: center;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 50px 0 50px;
+
+    .navbar_link {
+        color: var(--light-grey);
+        font-size: 20px;
+        font-family: var(--Merriweather);
+        text-align: center;
+        text-decoration: none;
+        margin-left: 20px;
+        transition: 0.3s;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 3px;
+            position: relative;
+            left: 0px;
+            top: 0%;
+            display: block;
+            background: var(--yellow);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s;
+        }
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+}

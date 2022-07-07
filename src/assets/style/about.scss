@@ -1,0 +1,47 @@
+/* About */
+
+#about {
+    width: 100%;
+    height: 100vh;
+    background: var(--dark-grey);
+    padding-top: 50px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.about_container {
+    width: 100%;
+    height: 100%;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about_container .about_content {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 15px;
+    border-radius: 20px;
+    border: 5px solid var(--yellow);
+
+    p {
+        font-weight: lighter;
+        span {
+            color: var(--yellow);
+        }
+    }
+}
+
+.about_container .about_content h1 span {
+    color: var(--yellow);
+}
+
+.about_container img {
+    width: 240px;
+    height: 240px;
+}
