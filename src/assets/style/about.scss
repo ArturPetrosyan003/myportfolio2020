@@ -30,6 +30,8 @@
     border: 5px solid var(--yellow);
 
     p {
+        font-size: 22px;
+        width: 700px;
         font-weight: lighter;
         span {
             color: var(--yellow);
@@ -44,4 +46,28 @@
 .about_container img {
     width: 240px;
     height: 240px;
+}
+
+@media screen and (max-width: 640px) {
+    #about {
+        zoom: 0.75;
+        height: 100%;
+    }
+
+    .about_container {
+        margin-top: 100px;
+        
+        .about_content {
+            padding: 25px 90px; 
+
+            img {
+                zoom: 0.75;
+            }
+
+            p {
+                font-size: 20px;
+                width: 350px;
+            }
+        }
+    }
 }

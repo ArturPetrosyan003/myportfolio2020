@@ -8,6 +8,11 @@
     flex-direction: column;
     box-sizing: border-box;
     padding-top: 50px;
+
+    .wrapper {
+        padding-right: 150px;
+        padding-left: 150px;
+    }
 }
 
 .home_container {
@@ -61,4 +66,31 @@
 #home .icon_container .icon {
     width: 45px;
     height: 45px;
+}
+
+@media screen and (max-width: 640px) {
+    #home {
+        height: 100%;
+        zoom: 0.75;
+
+        .wrapper {
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .home_container {
+        height: unset;
+        flex-direction: column;
+        margin-top: 90px;
+        margin-bottom: 40px;
+
+        h1 {
+            text-align: center;
+            font-size: 35px;
+        }
+    }
 }

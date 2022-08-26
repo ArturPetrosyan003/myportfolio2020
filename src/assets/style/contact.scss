@@ -7,7 +7,7 @@
     padding-top: 50px;
     box-sizing: border-box;
     overflow: hidden;
-    background-image: url('../images/contact-bg.svg');
+    background-image: url("../images/contact-bg.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -85,3 +85,20 @@
     align-self: end;
 }
 
+@media screen and (max-width: 640px) {
+    #contact {
+        zoom: 0.75;
+        height: 100%;
+        background-position: unset;
+    }
+
+    .contact_container {
+        margin-top: 100px;
+        margin-bottom: 250px;
+
+        form {
+            margin-top: 0;
+            zoom: 0.85;
+        }
+    }
+}

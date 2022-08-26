@@ -47,3 +47,28 @@
         }
     }
 }
+
+@media screen and (max-width: 640px) {
+    #career {
+        zoom: 0.75;
+        height: fit-content;
+    }
+
+    .career_container {
+        flex-direction: column;
+        margin-top: 100px;
+        padding: 0;
+
+        .path {
+            margin-bottom: 50px;
+        }
+
+        .career_item {
+            margin-bottom: 40px;
+        }
+
+        .career_item .text_section p {
+            font-size: 18px;
+        }
+    }
+}

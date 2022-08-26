@@ -9,28 +9,27 @@ import Fade from "react-reveal/Fade";
 import data from "../../data/data.json";
 
 const About = () => {
-  return (
-    <div id="about">
-      <PageName name="About" />
+    return (
+        <div id="about">
+            <PageName name="About" />
 
-      <Fade duration={1500}>
-        <div className="about_container">
-          <div className="about_content">
-            <img src={AboutImg} />
+            <Fade duration={1500}>
+                <div className="about_container">
+                    <div className="about_content">
+                        <img src={AboutImg} />
 
-            <div>
-              {/* <h1>I'm <span>Artur</span></h1> */}
+                        <div>
+                            {/* <h1>I'm <span>Artur</span></h1> */}
 
-              <p
-                style={{ fontSize: 22, width: "700px" }}
-                dangerouslySetInnerHTML={{ __html: data.about }}
-              ></p>
-            </div>
-          </div>
+                            <p
+                                dangerouslySetInnerHTML={{ __html: data.about }}
+                            ></p>
+                        </div>
+                    </div>
+                </div>
+            </Fade>
         </div>
-      </Fade>
-    </div>
-  );
+    );
 };
 
 export default About;

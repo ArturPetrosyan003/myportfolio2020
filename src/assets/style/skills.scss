@@ -20,7 +20,7 @@
 }
 
 .skill_row {
-   overflow: hidden;
+    overflow: hidden;
 }
 
 /* Skill Indicator */
@@ -57,3 +57,21 @@
     border-radius: 20px;
 }
 
+@media screen and (max-width: 640px) {
+    #skills {
+        zoom: 0.75;
+    }
+
+    .skills_container {
+        zoom: 0.8;
+        flex-direction: column;
+    }
+
+    .indicator_line {
+        width: 400px;
+    }
+
+    .indicator_label {
+        text-align: left;
+    }
+}

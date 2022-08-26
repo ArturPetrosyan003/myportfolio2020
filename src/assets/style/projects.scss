@@ -59,3 +59,37 @@
     width: 100%;
     height: 100%;
 }
+
+@media screen and (max-width: 640px) {
+    #projects {
+        zoom: 0.75;
+        height: max-content;
+    }
+
+    .projects_container {
+        zoom: 0.85;
+        margin-top: 100px;
+
+        .project_item {
+            margin-top: 30px;
+            margin-right: 0;
+        }
+
+        h3 {
+            width: 450px;
+            text-align: center;
+            font-size: 22px;
+            margin-top: 50px;
+        }
+    }
+}
+
+@media screen and (min-width: 430px) and (max-width: 640px) {
+    .projects_container {
+        padding-left: 15px;
+    }
+
+    .project_item {
+        margin-right: 30px!important;
+    }
+}

@@ -8,7 +8,7 @@
     padding-top: 80px;
     box-sizing: border-box;
     overflow: hidden;
-    background-image: url('../images/contact-bg.svg');
+    background-image: url("../images/contact-bg.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -76,7 +76,7 @@
     box-sizing: border-box;
 }
 
-.image_container .url_container button{
+.image_container .url_container button {
     width: 170px;
     height: 45px;
     color: white;
@@ -128,4 +128,31 @@
     font-family: var(--Ubuntu);
     font-weight: 600;
     margin: 10px 0px;
+}
+
+@media screen and (max-width: 640px) {
+    .single_project {
+        // zoom: 0.75;
+        // height: 100vh;
+        box-sizing: content-box;
+        overflow: auto;
+        background-position: unset;
+        padding-top: 50px;
+    }
+    .page_name {
+        zoom: 0.75;
+    }
+
+    .single_project_container {
+        flex-direction: column;
+        padding: 0;
+        zoom: 0.7;
+        align-items: center;
+        margin-top: 50px;
+
+        .info_container {
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+    }
 }

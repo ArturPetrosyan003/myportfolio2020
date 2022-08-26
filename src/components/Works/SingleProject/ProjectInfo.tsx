@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PageName from "@components/UI/PageName";
 
 import Mobile from "@icons/mobile.png";
@@ -32,6 +32,7 @@ import StartupGrind03 from "@images/StartupGrind/03.png";
 import data from "../../../data/data.json";
 import { iconSetter } from "../../../helpers/iconChanger";
 import { useSelector } from "react-redux";
+import useIsMobile from "../../../hooks/device";
 
 const imagePaths = {
     TPM01,
@@ -53,8 +54,13 @@ const imagePaths = {
 
 const ProjectInfo = (props) => {
     const [mainImage, setMainImage] = useState(props.data.image);
+    const isMobile = useIsMobile();
 
     const theme = useSelector((state: any) => state.theme);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const changeImage = (file, target) => {
         target.src = mainImage;
@@ -69,13 +75,15 @@ const ProjectInfo = (props) => {
         <div className="single_project">
             <PageName name={props.data.title} />
 
-            <div className="top_button back_button">
-                <Slide bottom>
-                    <button onClick={() => window.history.back()}>
-                        <img src={Arrow} />
-                    </button>
-                </Slide>
-            </div>
+            {isMobile ? null : (
+                <div className="top_button back_button">
+                    <Slide bottom>
+                        <button onClick={() => window.history.back()}>
+                            <img src={Arrow} />
+                        </button>
+                    </Slide>
+                </div>
+            )}
 
             <div className="single_project_container">
                 <div className="image_container">
