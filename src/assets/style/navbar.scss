@@ -1,73 +1,110 @@
 /* Navbar */
 
 .MuiPaper-root {
-    height: 12%;
-    background: var(--navbar) !important;
-    box-shadow: none !important;
-    position: absolute !important;
-    justify-content: center;
+  height: 12%;
+  background: var(--navbar) !important;
+  box-shadow: none !important;
+  position: absolute !important;
+  justify-content: center;
 }
 
 .navbar {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 50px 0 50px;
+
+  .navbar_link {
+    color: var(--light-grey);
+    font-size: 20px;
+    font-family: var(--Merriweather);
+    text-align: center;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 3px;
+      position: relative;
+      left: 0px;
+      top: 0%;
+      display: block;
+      background: var(--accent-color);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.5s;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+
+  .options-section {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0 50px 0 50px;
+  }
 
-    .navbar_link {
-        color: var(--light-grey);
-        font-size: 20px;
-        font-family: var(--Merriweather);
-        text-align: center;
-        text-decoration: none;
-        margin-left: 20px;
-        transition: 0.3s;
+  img {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+}
 
-        &::after {
-            content: "";
-            width: 100%;
-            height: 3px;
-            position: relative;
-            left: 0px;
-            top: 0%;
-            display: block;
-            background: var(--yellow);
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.5s;
-        }
-        &:hover::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-    }
+.color-picker {
+  background: var(--navbar);
+  color: var(--white);
+  margin-top: 30px;
+  z-index: 9999;
+  padding: 20px;
+  border-radius: 0px 0px 15px 15px;
 
-    img {
-        width: 20px;
-        height: 20px;
-        margin-left: 20px;
-        cursor: pointer;
-    }
+  input {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+  }
 }
 
 @media screen and (max-width: 640px) {
-    .MuiPaper-root {
-        height: 70px;
+  .MuiPaper-root {
+    height: 70px;
+  }
+
+  .MuiToolbar-gutters {
+    padding-left: 0 !important;
+    padding-right: 8px !important;
+  }
+
+  .color-picker {
+    top: -10px !important;
+    padding: 15px;
+
+    input {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  .navbar {
+    padding: 0;
+    justify-content: center;
+
+    .navbar_link {
+      margin-left: 10px;
+      font-size: 0.8rem;
     }
 
-    .navbar {
-        padding: 0;
-
-        .navbar_link {
-            margin-left: 10px;
-            font-size: 0.8rem;
-        }
-        
-        img {
-            width: 17px;
-            height: 17px;
-        }
+    img {
+      width: 17px;
+      height: 17px;
+      margin-left: 16px;
     }
+  }
 }

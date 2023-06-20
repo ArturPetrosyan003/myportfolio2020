@@ -12,14 +12,14 @@
     background-position: center;
 
     p {
-        color: var(--yellow);
+        color: var(--accent-color);
         font-size: 80px;
     }
 
     button {
         width: 100px;
         height: 40px;
-        background: var(--yellow);
+        background: var(--accent-color);
         color: white;
         font-size: 18px;
         font-family: var(--Ubuntu);
@@ -41,7 +41,7 @@
     width: 60px;
     height: 60px;
     color: var(--white);
-    background: var(--yellow);
+    background: var(--accent-color);
     font-size: 30px;
     border: none;
     border-radius: 100%;
@@ -59,7 +59,7 @@
     width: 290px;
     height: 60px;
     color: white;
-    background: var(--yellow);
+    background: var(--accent-color);
     font-size: 24px;
     font-family: var(--Anton);
     letter-spacing: 1.2px;
@@ -108,7 +108,7 @@
         content: "";
         width: 4.5px;
         height: 55px;
-        background: var(--yellow);
+        background: var(--accent-color);
         position: absolute;
         margin-left: 13px;
         margin-top: 30px;

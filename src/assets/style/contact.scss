@@ -7,7 +7,6 @@
     padding-top: 50px;
     box-sizing: border-box;
     overflow: hidden;
-    background-image: url("../images/contact-bg.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -49,7 +48,7 @@
 }
 
 .contact_container form p span {
-    color: var(--yellow);
+    color: var(--accent-color);
 }
 
 .contact_container form input:not(.send_button) {
@@ -72,7 +71,7 @@
 .contact_container form .send_button {
     width: 150px;
     height: 40px;
-    background: var(--yellow);
+    background: var(--accent-color);
     color: white;
     font-size: 22px;
     font-family: var(--Ubuntu);

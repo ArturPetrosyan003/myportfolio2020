@@ -17,39 +17,39 @@ import { Theme } from "./data/theme";
 import "./assets/style/style.scss";
 
 const Layout = () => {
-    const theme = useSelector((state: any) => state.theme);
-    const isMobile = useIsMobile();
+  const theme = useSelector((state: any) => state.theme);
+  const color = useSelector((state: any) => state.color);
 
-    useEffect(() => {
-        if (theme === "light") {
-            Object.keys(Theme.lightTheme).map((key) => {
-                document.documentElement.style.setProperty(
-                    key,
-                    Theme.lightTheme[key]
-                );
-            });
-            return;
-        }
-        Object.keys(Theme.darkTheme).map((key) => {
-            document.documentElement.style.setProperty(
-                key,
-                Theme.darkTheme[key]
-            );
-        });
-    }, [theme]);
+  const isMobile = useIsMobile();
 
-    return (
-        <div className="App">
-            <Navigation />
-            <Home />
-            <About />
-            <Skills />
-            <Works />
-            <Career />
-            <Contact />
-            {isMobile ? null : <ToTopBtn />}
-        </div>
-    );
+  useEffect(() => {
+    if (theme === "light") {
+      Object.keys(Theme.lightTheme).map((key) => {
+        document.documentElement.style.setProperty(key, Theme.lightTheme[key]);
+      });
+      return;
+    }
+    Object.keys(Theme.darkTheme).map((key) => {
+      document.documentElement.style.setProperty(key, Theme.darkTheme[key]);
+    });
+  }, [theme]);
+
+  useEffect(() => {
+    document.documentElement.style.setProperty("--accent-color", color);
+  }, [color]);
+
+  return (
+    <div className="App">
+      <Navigation />
+      <Home />
+      <About />
+      <Skills />
+      <Works />
+      <Career />
+      <Contact />
+      {isMobile ? null : <ToTopBtn />}
+    </div>
+  );
 };
 
 export default connect(null, null)(Layout);

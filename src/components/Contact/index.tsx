@@ -1,13 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import * as ReactDOMServer from "react-dom/server";
 
 import PageName from "@components/UI/PageName";
 
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
+import Background from "../../helpers/svg/background";
+import { useSelector } from "react-redux";
 
 const Contact = () => {
   const [errorText, setErrorText] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const color = useSelector((state: any) => state.color);
 
   const sendEmail = async (event) => {
     event.preventDefault();
@@ -38,10 +43,16 @@ const Contact = () => {
     }
   };
 
-  return (
-    <div id="contact">
-      <PageName name="Contact" />
+  const svgString = encodeURIComponent(
+    ReactDOMServer.renderToStaticMarkup(<Background color={color} />)
+  );
 
+  return (
+    <div
+      id="contact"
+      style={{ backgroundImage: `url("data:image/svg+xml,${svgString}")` }}
+    >
+      <PageName name="Contact" />
       <Fade duration={2000}>
         <div className="contact_container">
           <Slide duration={1500} top>

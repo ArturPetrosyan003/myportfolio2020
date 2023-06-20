@@ -3,29 +3,32 @@ import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
 
 import Point from "@icons/point.png";
+import Dot from "../../helpers/svg/dot";
+import { useSelector } from "react-redux";
 
 interface CareerItemProps {
-    title: string;
-    date: string;
-    additionalClass?: string;
+  title: string;
+  date: string;
+  additionalClass?: string;
 }
 
 const CareerItem = ({ title, date, additionalClass }: CareerItemProps) => {
-    return (
-        <div className={`career_item ${additionalClass}`}>
-            <Fade>
-                <img className="point" src={Point} />
-            </Fade>
-            <Slide right>
-                <div className="text_section">
-                    <p>{title}</p>
-                    <span>{date}</span>
-                </div>
-            </Slide>
-        </div>
-    );
-};
+  const color = useSelector((state: any) => state.color);
 
-CareerItem.propsTypes = {};
+  return (
+    <div className={`career_item ${additionalClass}`}>
+      <Fade>
+        <Dot color={color} className="point" />
+      </Fade>
+
+      <Slide right>
+        <div className="text_section">
+          <p>{title}</p>
+          <span>{date}</span>
+        </div>
+      </Slide>
+    </div>
+  );
+};
 
 export default CareerItem;

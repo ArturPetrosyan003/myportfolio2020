@@ -26,26 +26,27 @@
     align-items: center;
     justify-content: center;
     padding: 25px 15px;
-    border-radius: 20px;
-    border: 5px solid var(--yellow);
+    border-radius: 35px 10px;
+    border: 5px solid var(--accent-color);
 
     p {
         font-size: 22px;
         width: 700px;
         font-weight: lighter;
         span {
-            color: var(--yellow);
+            color: var(--accent-color);
         }
     }
 }
 
 .about_container .about_content h1 span {
-    color: var(--yellow);
+    color: var(--accent-color);
 }
 
 .about_container img {
     width: 240px;
     height: 240px;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 640px) {
