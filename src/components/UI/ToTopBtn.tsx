@@ -1,10 +1,12 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
-import arrow from "@icons/arrow.png";
 import Zoom from "react-reveal/Zoom";
+import Arrow from "../../helpers/svg/arrow";
 
 const ToTopBtn = () => {
   const [show, setShow] = useState(false);
+  const theme = useSelector((state: any) => state.theme);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -23,7 +25,7 @@ const ToTopBtn = () => {
       <div className="top_button">
         <a href="/#home">
           <button>
-            <img src={arrow} />
+            <Arrow color={theme === "dark" ? "#fff" : "#292929"} />
           </button>
         </a>
       </div>

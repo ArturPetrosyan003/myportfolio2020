@@ -1,120 +1,146 @@
 /* 404 */
 
 .not_found {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: url("../images/contact-bg.png");
-    background-size: cover;
-    background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/contact-bg.png");
+  background-size: cover;
+  background-position: center;
 
-    p {
-        color: var(--accent-color);
-        font-size: 80px;
-    }
+  p {
+    color: var(--accent-color);
+    font-size: 80px;
+  }
 
-    button {
-        width: 100px;
-        height: 40px;
-        background: var(--accent-color);
-        color: white;
-        font-size: 18px;
-        font-family: var(--Ubuntu);
-        border: none;
-        border-radius: 10px;
-    }
+  button {
+    width: 100px;
+    height: 40px;
+    background: var(--accent-color);
+    color: white;
+    font-size: 18px;
+    font-family: var(--Ubuntu);
+    border: none;
+    border-radius: 10px;
+  }
 }
 
 /* Top Button */
 
 .top_button {
-    position: fixed;
-    top: 85%;
-    left: 92%;
-    z-index: 999;
+  position: fixed;
+  top: 85%;
+  left: 92%;
+  z-index: 999;
 }
 
 .top_button button {
-    width: 60px;
-    height: 60px;
-    color: var(--white);
+  width: 60px;
+  height: 60px;
+  color: var(--white);
+  background: transparent;
+  font-size: 30px;
+  border: 2px solid var(--accent-color);
+  border-radius: 100%;
+  padding: 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 0%;
     background: var(--accent-color);
-    font-size: 30px;
-    border: none;
-    border-radius: 100%;
-    padding: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: -1;
+    transition: 0.5s;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    &::after {
+      width: 120%;
+      height: 120%;
+    }
+  }
 }
 
-.top_button button img {
-    width: 30px;
-    height: 25px;
+.top_button button svg {
+  width: 30px;
+  height: 25px;
+  transform: rotate(180deg);
 }
 
 /* Page Name */
 
 .page_name {
-    width: 290px;
-    height: 60px;
-    color: white;
-    background: var(--accent-color);
-    font-size: 24px;
-    font-family: var(--Anton);
-    letter-spacing: 1.2px;
-    text-align: center;
-    padding-top: 11px;
-    box-sizing: border-box;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+  width: 290px;
+  height: 60px;
+  color: white;
+  background: var(--accent-color);
+  font-size: 24px;
+  font-family: var(--Anton);
+  letter-spacing: 1.2px;
+  text-align: center;
+  padding-top: 11px;
+  box-sizing: border-box;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 /*Career Item*/
 
 .career_item {
-    width: fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: start;
+  justify-content: left;
+  margin-bottom: 30px;
+
+  .text_section {
     display: flex;
-    align-items: start;
-    justify-content: left;
-    margin-bottom: 30px;
+    flex-direction: column;
+    align-items: left;
 
-    .text_section {
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-
-        p {
-            color: var(--light-grey);
-            font-size: 24px;
-            margin: 0;
-            font-weight: 500;
-        }
-
-        span {
-            font-size: 15px;
-            color: var(--light-grey);
-        }
+    p {
+      color: var(--light-grey);
+      font-size: 24px;
+      margin: 0;
+      font-weight: 500;
     }
 
-    .point {
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
-        margin-top: 3px;
+    span {
+      font-size: 15px;
+      color: var(--light-grey);
     }
+  }
 
-    &::before {
-        content: "";
-        width: 4.5px;
-        height: 55px;
-        background: var(--accent-color);
-        position: absolute;
-        margin-left: 13px;
-        margin-top: 30px;
-    }
+  .point {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-top: 3px;
+  }
 
-    &.last::before {
-        width: 0;
-    }
+  &::before {
+    content: "";
+    width: 4.5px;
+    height: 55px;
+    background: var(--accent-color);
+    position: absolute;
+    margin-left: 13px;
+    margin-top: 30px;
+  }
+
+  &.last::before {
+    width: 0;
+  }
 }

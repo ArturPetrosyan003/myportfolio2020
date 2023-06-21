@@ -63,6 +63,7 @@
   height: 83px;
   border-radius: 20px;
   margin-right: 12px;
+  cursor: pointer;
 }
 
 .image_container .url_container {
@@ -78,20 +79,48 @@
 .image_container .url_container button {
   width: 170px;
   height: 45px;
-  color: white;
-  background: var(--accent-color);
+  color: var(--white);
+  background: transparent;
   font-family: var(--Ubuntu);
   font-weight: 600;
   font-size: 22px;
-  border: none;
+  border: 2px solid var(--accent-color);
   border-radius: 25px;
   box-shadow: none;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 100%;
+    background: var(--accent-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+    transition: 0.5s;
+  }
+
+  &:hover {
+    &::after {
+      width: 170px;
+    }
+  }
 }
 
 .image_container .url_container img {
   width: 45px;
   height: 45px;
   margin-left: 20px;
+  transition: 0.5s;
+
+  &:hover {
+    transform: translateY(5px);
+  }
 }
 
 .info_container {

@@ -6,7 +6,6 @@ import PageName from "@components/UI/PageName";
 import Mobile from "@icons/mobile.png";
 import Web from "@icons/web.png";
 import Github from "@icons/github.png";
-import Arrow from "@icons/arrow.png";
 
 import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
@@ -39,6 +38,7 @@ import { useSelector } from "react-redux";
 import useIsMobile from "../../../hooks/device";
 
 import Background from "../../../helpers/svg/background";
+import Arrow from "../../../helpers/svg/arrow";
 
 const imagePaths = {
   TPM01,
@@ -82,6 +82,10 @@ const ProjectInfo = (props) => {
     ReactDOMServer.renderToStaticMarkup(<Background color={color} />)
   );
 
+  useEffect(() => {
+    document.documentElement.style.setProperty("--accent-color", color);
+  }, [color]);
+
   return (
     <div
       className="single_project"
@@ -93,7 +97,7 @@ const ProjectInfo = (props) => {
         <div className="top_button back_button">
           <Slide bottom>
             <button onClick={() => window.history.back()}>
-              <img src={Arrow} />
+              <Arrow color={theme === "dark" ? "#fff" : "#292929"} />
             </button>
           </Slide>
         </div>
