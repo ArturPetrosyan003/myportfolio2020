@@ -23,11 +23,9 @@ const ToTopBtn = () => {
   return show == true ? (
     <Zoom duration={400}>
       <div className="top_button">
-        <a href="/#home">
-          <button>
-            <Arrow color={theme === "dark" ? "#fff" : "#292929"} />
-          </button>
-        </a>
+        <button onClick={() => window.scrollTo(0, 0)}>
+          <Arrow color={theme === "dark" ? "#fff" : "#292929"} />
+        </button>
       </div>
     </Zoom>
   ) : null;

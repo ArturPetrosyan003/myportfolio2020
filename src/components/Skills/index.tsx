@@ -2,10 +2,14 @@ import React, { Component } from "react";
 
 import Indicator from "@components/UI/Indicator";
 import PageName from "@components/UI/PageName";
+import Divider from "../../helpers/svg/divider";
 
 const Skills = () => {
   return (
     <div id="skills">
+      <div className="divider">
+        <Divider />
+      </div>
       <PageName name="Skills" />
 
       <div className="skills_container">

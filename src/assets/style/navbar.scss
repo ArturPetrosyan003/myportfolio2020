@@ -4,8 +4,16 @@
   height: 12%;
   background: var(--navbar) !important;
   box-shadow: none !important;
-  position: absolute !important;
+  position: fixed !important;
   justify-content: center;
+}
+
+.navbar_fadeOut {
+  animation: fadeOut 0.3s linear forwards;
+}
+
+.navbar_fadeIn {
+  animation: fadeIn 0.3s linear forwards;
 }
 
 .navbar {
@@ -69,6 +77,26 @@
     height: 40px;
     border: none;
     background: transparent;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 

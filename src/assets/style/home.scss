@@ -8,6 +8,9 @@
   flex-direction: column;
   box-sizing: border-box;
   padding-top: 50px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 
   .wrapper {
     padding-right: 150px;
@@ -116,6 +119,10 @@
   margin-top: 40px;
   width: 225px;
   justify-content: space-between;
+
+  a {
+    overflow: hidden;
+  }
 }
 
 #home .icon_container .icon {

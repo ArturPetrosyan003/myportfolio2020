@@ -1,95 +1,99 @@
 /* Projects */
 
 #projects {
-    width: 100%;
-    height: 100vh;
-    background: var(--dark-grey);
-    padding: 50px 0px 40px 0px;
-    box-sizing: border-box;
-    overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background: var(--dark-grey);
+  padding: 50px 0px 40px 0px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .projects_container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .projects_container h3 {
-    color: var(--light-grey);
+  color: var(--light-grey);
 }
 
 /* Project Item */
 
 .project_item {
-    width: 340px;
-    height: 185px;
-    border-radius: 20px;
-    margin-right: 50px;
-    cursor: pointer;
-    overflow: hidden;
+  width: 340px;
+  height: 185px;
+  border-radius: 20px;
+  margin-right: 50px;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .project_item .cover {
-    width: 340px;
-    height: 185px;
-    background: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    border-radius: 20px;
-    z-index: 9;
+  width: 340px;
+  height: 185px;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  border-radius: 20px;
+  z-index: 9;
 }
 
 .project_item .cover p {
-    color: white;
-    font-size: 30px;
-    text-align: center;
+  color: white;
+  font-size: 30px;
+  text-align: center;
 }
 
 .project_item .cover hr {
-    width: 80%;
-    height: 1px;
-    background: white;
-    border: none;
+  width: 80%;
+  height: 1px;
+  background: white;
+  border: none;
 }
 
 .project_item img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 640px) {
-    #projects {
-        zoom: 0.75;
-        height: max-content;
+  #projects {
+    zoom: 0.75;
+    height: max-content;
+  }
+
+  .projects_container {
+    zoom: 0.85;
+    margin-top: 100px;
+
+    .project_item {
+      margin-top: 30px;
+      margin-right: 0;
     }
 
-    .projects_container {
-        zoom: 0.85;
-        margin-top: 100px;
-
-        .project_item {
-            margin-top: 30px;
-            margin-right: 0;
-        }
-
-        h3 {
-            width: 450px;
-            text-align: center;
-            font-size: 22px;
-            margin-top: 50px;
-        }
+    h3 {
+      width: 450px;
+      text-align: center;
+      font-size: 22px;
+      margin-top: 50px;
     }
+  }
 }
 
 @media screen and (min-width: 430px) and (max-width: 640px) {
-    .projects_container {
-        padding-left: 15px;
-    }
+  .projects_container {
+    padding-left: 15px;
+  }
 
-    .project_item {
-        margin-right: 30px!important;
-    }
+  .project_item {
+    margin-right: 30px !important;
+  }
 }
