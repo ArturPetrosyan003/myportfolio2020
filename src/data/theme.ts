@@ -13,7 +13,7 @@ export const Theme = {
     "--black": "#fff",
     "--light-grey": "#686666",
     "--dark-grey": "#fff",
-    "--form-bg": "rgba(245, 245, 245, 0.85)",
+    "--form-bg": "rgba(220, 220, 220, 0.8)",
     "--navbar": "#f1f1f1",
     "--indicator-bg": "#e2e2e2",
   }

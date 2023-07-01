@@ -16,11 +16,12 @@ const Skills = () => {
         <div className="skill_row">
           <Indicator name="Html" percent="95" />
           <Indicator name="Css" percent="95" />
-          <Indicator name="Js" percent="88" />
-          <Indicator name="React" percent="85" />
+          <Indicator name="Js" percent="95" />
+          <Indicator name="React" percent="95" />
           <Indicator name="React Native" percent="80" />
           <Indicator name="Node Js" percent="60" />
           <Indicator name="Angular" percent="40" />
+          <Indicator name="Three Js" percent="40" />
         </div>
 
         <div className="skill_row">
