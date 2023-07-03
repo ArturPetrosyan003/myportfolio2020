@@ -43,6 +43,10 @@
       align-items: start;
       justify-content: center;
 
+      .section {
+        width: max-content;
+      }
+
       .section:nth-child(1) {
         margin-right: 60px;
       }
@@ -53,19 +57,30 @@
 @media screen and (max-width: 640px) {
   #career {
     zoom: 0.75;
-    height: fit-content;
   }
 
   .career_container {
-    flex-direction: column;
-    margin-top: 60px;
-    padding: 0;
+    height: 100%;
+    flex-direction: row;
+    padding: 120px 30px;
+    column-gap: 50px;
+    overflow-x: auto;
+    box-sizing: border-box;
+
+    h2 {
+      margin-top: 0;
+    }
 
     .path {
       margin-bottom: 50px;
     }
 
+    .workshops {
+      overflow: visible;
+    }
+
     .career_item {
+      width: max-content;
       margin-bottom: 40px;
     }
 

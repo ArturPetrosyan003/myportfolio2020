@@ -67,12 +67,16 @@
 @media screen and (max-width: 640px) {
   #projects {
     zoom: 0.75;
-    height: max-content;
   }
 
   .projects_container {
     zoom: 0.85;
-    margin-top: 100px;
+    flex-direction: column;
+    height: 100%;
+    overflow-x: auto;
+    padding: 0 50px;
+    box-sizing: border-box;
+    column-gap: calc(100% - 450px);
 
     .project_item {
       margin-top: 30px;
