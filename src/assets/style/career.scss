@@ -60,12 +60,12 @@
   }
 
   .career_container {
-    height: 100%;
-    flex-direction: row;
-    padding: 120px 30px;
-    column-gap: 50px;
-    overflow-x: auto;
+    flex-direction: column;
+    padding: 0 30px 160px 30px;
     box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 60px;
 
     h2 {
       margin-top: 0;

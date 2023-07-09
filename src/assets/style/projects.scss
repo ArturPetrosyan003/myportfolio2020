@@ -71,12 +71,10 @@
 
   .projects_container {
     zoom: 0.85;
-    flex-direction: column;
-    height: 100%;
-    overflow-x: auto;
-    padding: 0 50px;
+    padding: 0 50px 160px 50px;
     box-sizing: border-box;
-    column-gap: calc(100% - 450px);
+    margin-top: 40px;
+    overflow-y: auto;
 
     .project_item {
       margin-top: 30px;

@@ -171,7 +171,7 @@
     // zoom: 0.75;
     // height: 100vh;
     box-sizing: content-box;
-    overflow: auto;
+    overflow: hidden;
     background-position: unset;
     padding-top: 50px;
   }
@@ -185,6 +185,7 @@
     zoom: 0.7;
     align-items: center;
     margin-top: 50px;
+    overflow: auto;
 
     .info_container {
       margin-top: 30px;

@@ -11,6 +11,8 @@ import ToTopBtn from "@components/UI/ToTopBtn";
 
 import useIsMobile from "./hooks/device";
 
+import { useHistory } from "react-router";
+
 import { connect, useSelector } from "react-redux";
 
 import { Theme } from "./data/theme";
@@ -21,6 +23,16 @@ const Layout = () => {
   const color = useSelector((state: any) => state.color);
 
   const isMobile = useIsMobile();
+
+  const history = useHistory();
+
+  useEffect(() => {
+    history.listen((_, action) => {
+      if (action === "POP") {
+        history.replace("/");
+      }
+    });
+  }, []);
 
   useEffect(() => {
     if (theme === "light") {

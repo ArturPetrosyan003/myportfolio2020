@@ -29,7 +29,7 @@ const WebMenu = (props) => {
       containerRef.current.classList.remove("navbar_fadeOut");
       containerRef.current.classList.add("navbar_fadeIn");
     });
-  }, [containerRef]);
+  }, [containerRef.current]);
 
   const openColorPicker = () => {
     setOpenPicker(!openPicker);
