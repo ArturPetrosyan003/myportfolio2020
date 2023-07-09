@@ -17,13 +17,26 @@ const WebMenu = (props) => {
 
   const dispatch = useDispatch();
   const colorPickerRef = useRef(null);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        containerRef.current.classList.remove("navbar_fadeIn");
+        containerRef.current.classList.add("navbar_fadeOut");
+        return;
+      }
+      containerRef.current.classList.remove("navbar_fadeOut");
+      containerRef.current.classList.add("navbar_fadeIn");
+    });
+  }, [containerRef.current]);
 
   const openColorPicker = () => {
     setOpenPicker(!openPicker);
   };
 
   return (
-    <AppBar>
+    <AppBar ref={containerRef}>
       <Toolbar>
         <div className="navbar">
           <Slide top delay={0}>

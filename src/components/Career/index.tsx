@@ -7,10 +7,14 @@ import CareerItem from "@components/UI/CareerItem";
 
 import Star from "@icons/star.png";
 import { Tooltip } from "@material-ui/core";
+import Divider from "../../helpers/svg/divider";
 
 const Career = () => {
   return (
     <div id="career">
+      <div className="divider">
+        <Divider />
+      </div>
       <PageName name="Career" />
 
       <div className="career_container">
@@ -43,7 +47,7 @@ const Career = () => {
 
           <div className="list">
             <div className="section">
-              <Slide left>
+              <Slide left delay={300}>
                 <p>
                   • Animation{" "}
                   <Tooltip title="Passed with star">
@@ -52,7 +56,7 @@ const Career = () => {
                 </p>
               </Slide>
 
-              <Slide left delay={200}>
+              <Slide left delay={500}>
                 <p>
                   • Robotics{" "}
                   <Tooltip title="Passed with star">
@@ -61,7 +65,7 @@ const Career = () => {
                 </p>
               </Slide>
 
-              <Slide left delay={400}>
+              <Slide left delay={700}>
                 <p>
                   • 3D modeling{" "}
                   <Tooltip title="Passed with star">
@@ -70,7 +74,7 @@ const Career = () => {
                 </p>
               </Slide>
 
-              <Slide left delay={600}>
+              <Slide left delay={900}>
                 <p>
                   • Programming{" "}
                   <Tooltip title="Passed with star">
@@ -79,7 +83,7 @@ const Career = () => {
                 </p>
               </Slide>
 
-              <Slide left delay={800}>
+              <Slide left delay={1100}>
                 <p>
                   • Web development{" "}
                   <Tooltip title="Passed with star">
@@ -88,7 +92,7 @@ const Career = () => {
                 </p>
               </Slide>
 
-              <Slide left delay={1000}>
+              <Slide left delay={1300}>
                 <p>
                   • Game development{" "}
                   <Tooltip title="Passed with star">
@@ -97,7 +101,7 @@ const Career = () => {
                 </p>
               </Slide>
 
-              <Slide left delay={1200}>
+              <Slide left delay={1500}>
                 <p>
                   • Front-end Back-end{" "}
                   <Tooltip title="Passed with star">
@@ -106,7 +110,7 @@ const Career = () => {
                 </p>
               </Slide>
 
-              <Slide left delay={1400}>
+              <Slide left delay={1700}>
                 <p>
                   • React native{" "}
                   <Tooltip title="Passed with star">

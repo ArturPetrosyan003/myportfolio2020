@@ -8,6 +8,9 @@
   flex-direction: column;
   box-sizing: border-box;
   padding-top: 50px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 
   .wrapper {
     padding-right: 150px;
@@ -116,6 +119,10 @@
   margin-top: 40px;
   width: 225px;
   justify-content: space-between;
+
+  a {
+    overflow: hidden;
+  }
 }
 
 #home .icon_container .icon {
@@ -136,7 +143,7 @@
     zoom: 0.75;
 
     .wrapper {
-      padding: 0 20px;
+      padding: 0 20px 100px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -147,7 +154,7 @@
   .home_container {
     height: unset;
     flex-direction: column;
-    margin-top: 90px;
+    margin-top: 60px;
     margin-bottom: 40px;
 
     h1 {

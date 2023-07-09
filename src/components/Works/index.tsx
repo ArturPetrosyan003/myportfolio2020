@@ -11,11 +11,15 @@ import Startups from "@images/startups.png";
 import Mazer from "@images/mazer.png";
 
 import Fade from "react-reveal/Fade";
+import Divider from "../../helpers/svg/divider";
 
 const Works = () => {
   return (
     <>
       <div id="projects">
+        <div className="divider">
+          <Divider />
+        </div>
         <PageName name="Projects" />
 
         <div className="projects_container">

@@ -6,6 +6,8 @@ import PageName from "@components/UI/PageName";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 import Background from "../../helpers/svg/background";
+import Divider from "../../helpers/svg/divider";
+
 import { useSelector } from "react-redux";
 
 const Contact = () => {
@@ -52,7 +54,11 @@ const Contact = () => {
       id="contact"
       style={{ backgroundImage: `url("data:image/svg+xml,${svgString}")` }}
     >
+      <div className="divider">
+        <Divider />
+      </div>
       <PageName name="Contact" />
+
       <Fade duration={2000}>
         <div className="contact_container">
           <Slide duration={1500} top>

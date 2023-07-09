@@ -1,74 +1,91 @@
 #career {
-    width: 100%;
-    height: 100vh;
-    background: var(--dark-grey);
-    padding-top: 50px;
-    box-sizing: border-box;
-    overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background: var(--dark-grey);
+  padding-top: 50px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .career_container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 150px;
-    box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 150px;
+  box-sizing: border-box;
 
-    .workshops {
-       & {
-        margin-top: -60px;
-       }
+  .workshops {
+    overflow: hidden;
+    margin-top: -60px;
 
-        h2 {
-            color: var(--accent-color);
-            font-size: 28px;
-            text-align: center;
-        }
-        p {
-            color: var(--light-grey);
-            font-size: 20px;
-
-            img {
-                width: 15px;
-                height: 15px;
-                margin-left: 10px;
-            }
-        }
-        .list {
-            display: flex;
-            align-items: start;
-            justify-content: center;
-
-            .section:nth-child(1) {
-                margin-right: 60px;
-            }
-        }
+    h2 {
+      color: var(--accent-color);
+      font-size: 28px;
+      text-align: center;
     }
+    p {
+      color: var(--light-grey);
+      font-size: 20px;
+
+      img {
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+      }
+    }
+    .list {
+      display: flex;
+      align-items: start;
+      justify-content: center;
+
+      .section {
+        width: max-content;
+      }
+
+      .section:nth-child(1) {
+        margin-right: 60px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 640px) {
-    #career {
-        zoom: 0.75;
-        height: fit-content;
+  #career {
+    zoom: 0.75;
+  }
+
+  .career_container {
+    flex-direction: column;
+    padding: 0 30px 160px 30px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 60px;
+
+    h2 {
+      margin-top: 0;
     }
 
-    .career_container {
-        flex-direction: column;
-        margin-top: 100px;
-        padding: 0;
-
-        .path {
-            margin-bottom: 50px;
-        }
-
-        .career_item {
-            margin-bottom: 40px;
-        }
-
-        .career_item .text_section p {
-            font-size: 18px;
-        }
+    .path {
+      margin-bottom: 50px;
     }
+
+    .workshops {
+      overflow: visible;
+    }
+
+    .career_item {
+      width: max-content;
+      margin-bottom: 40px;
+    }
+
+    .career_item .text_section p {
+      font-size: 18px;
+    }
+  }
 }
