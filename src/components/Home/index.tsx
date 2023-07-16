@@ -1,6 +1,7 @@
 import React, { Component, useEffect } from "react";
 
-import ProfileImage from "@images/profile-pic.jpg";
+import ProfileImage from "@images/hero.png";
+import Shape from "@images/shape.svg";
 
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
@@ -17,13 +18,17 @@ const Home = () => {
     <div id="home">
       <div className="wrapper">
         <div className="home_container">
-          <Slide left duration={1000}>
-            <h1 dangerouslySetInnerHTML={{ __html: data.home }}></h1>
-          </Slide>
-
           <Fade duration={1500}>
+            <h1 dangerouslySetInnerHTML={{ __html: data.home }}></h1>
+          </Fade>
+
+          <Fade duration={700}>
             <img className="profile_image" src={ProfileImage} />
           </Fade>
+
+          <Slide right duration={1500}>
+            <img className="shape" src={Shape} alt="" />
+          </Slide>
         </div>
 
         <Slide right duration={1000}>

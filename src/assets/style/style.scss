@@ -15,6 +15,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Ubuntu+Condensed&display=swap");
 
+@font-face {
+  font-family: 'Cyberpunk';
+  src: local('Cyberpunk'), url(../fonts/CyberwayRiders-lg97d.ttf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Glitch';
+  src: local('Glitch'), url(../fonts/GlitchGoblin-2O87v.ttf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Glitch2';
+  src: local('Glitch2'), url(../fonts/Glitchcrafty-lgo4V.ttf) format('opentype');
+}
+
 * {
   font-family: var(--Roboto);
 }

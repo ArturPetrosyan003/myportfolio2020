@@ -11,9 +11,9 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  overflow: hidden;
 
   .wrapper {
-    padding-right: 150px;
     padding-left: 150px;
   }
 }
@@ -26,57 +26,76 @@
   justify-content: space-between;
   overflow: hidden;
   margin-top: 100px;
-}
+  overflow: visible;
+  position: relative;
 
-.home_container h1 {
-  color: var(--white);
-  font-size: 50px;
-}
+  h1 {
+    color: var(--white);
+    font-size: 60px;
+    font-family: var(--Glitch);
+    letter-spacing: 5px;
+    line-height: 1.3;
+    text-shadow: 0px 5px 8px black;
 
-@mixin typingSection($left-offset) {
-  .home_container h1 span {
-    color: var(--accent-color);
-
-    &::after {
-      content: "";
-      display: block;
-      width: 30%;
-      height: 46px;
-      background: var(--dark-grey);
-      border-left: 3px solid var(--accent-color);
-      position: absolute;
-      top: 27%;
-      left: $left-offset;
-      animation: typing 1s 1s steps(10) forwards,
-        pulsing 0.7s 3s linear alternate infinite;
+    span {
+      color: var(--accent-color);
+      font-family: Glitch;
+      letter-spacing: 5px;
+      text-shadow: 0px 5px 8px rgb(0, 0, 0);
     }
   }
 
-  @keyframes typing {
-    100% {
-      left: calc($left-offset + 32%);
-      margin: 0 -35px 0 -35px;
-    }
+  .profile_image {
+    height: 100vh;
+    position: absolute;
+    right: 70px;
+    top: -70px;
+    filter: drop-shadow(-10px 10px 35px black);
+  }
+
+  .shape {
+    height: 100vh;
+    position: absolute;
+    right: 40px;
+    top: -50px;
+    z-index: -1;
   }
 }
 
-@keyframes pulsing {
-  100% {
-    opacity: 0;
-  }
-}
+// @mixin typingSection($left-offset) {
+//   .home_container h1 span {
+//     color: var(--accent-color);
 
-@include typingSection($left-offset: 12%);
+//     &::after {
+//       content: "";
+//       display: block;
+//       width: 30%;
+//       height: 60px;
+//       background: var(--dark-grey);
+//       border-left: 3px solid var(--accent-color);
+//       position: absolute;
+//       top: 23%;
+//       left: $left-offset;
+//       animation: typing 1s 1s steps(10) forwards,
+//         pulsing 0.7s 3s linear alternate infinite;
+//     }
+//   }
 
-.home_container img {
-  width: 320px;
-  height: 320px;
-  object-fit: cover;
-  border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
+//   @keyframes typing {
+//     100% {
+//       left: calc($left-offset + 32%);
+//       margin: 0 -35px 0 -35px;
+//     }
+//   }
+// }
+
+// @keyframes pulsing {
+//   100% {
+//     opacity: 0;
+//   }
+// }
+
+// @include typingSection($left-offset: 12%);
 
 .contact_button {
   width: 170px;
@@ -85,10 +104,11 @@
   background: transparent;
   border: 2px solid var(--accent-color);
   font-size: 22px;
-  font-family: var(--Ubuntu);
+  font-family: var(--Glitch);
   font-weight: 700;
   border-radius: 25px;
   box-shadow: none;
+  transform: skewY(45deg);
 
   &::after {
     content: "";
@@ -136,7 +156,7 @@
 }
 
 @media screen and (max-width: 640px) {
-  @include typingSection($left-offset: 44%);
+  // @include typingSection($left-offset: 44%);
 
   #home {
     height: 100%;
