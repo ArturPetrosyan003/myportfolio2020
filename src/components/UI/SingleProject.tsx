@@ -16,30 +16,30 @@ const SingleProject = (props) => {
     <Link
       to={{
         pathname: `/project/${props.id}`,
-        state: {
-          id: props.id,
-          title: props.title,
-          image: props.image,
-        },
+      }}
+      state={{
+        id: props.id,
+        title: props.title,
+        image: props.image,
       }}
     >
-      <Zoom duration={1000}>
-        <div
-          className="project_item"
-          onMouseEnter={() => hoverEffect()}
-          onMouseLeave={() => hoverEffect()}
-        >
-          <Fade duration={700} when={hover}>
-            <div className="cover">
-              <Fade bottom duration={700} when={hover}>
-                <p>{props.title}</p>
-                <hr />
-              </Fade>
-            </div>
-          </Fade>
-          <img src={props.image} />
-        </div>
-      </Zoom>
+      {/* <Zoom duration={1000}> */}
+      <div
+        className="project_item"
+        onMouseEnter={() => hoverEffect()}
+        onMouseLeave={() => hoverEffect()}
+      >
+        <Fade duration={700} when={hover}>
+          <div className="cover">
+            <Fade bottom duration={700} when={hover}>
+              <p>{props.title}</p>
+              <hr />
+            </Fade>
+          </div>
+        </Fade>
+        <img src={props.image} />
+      </div>
+      {/* </Zoom> */}
     </Link>
   );
 };

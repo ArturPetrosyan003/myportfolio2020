@@ -1,26 +1,19 @@
 import React from "react";
 
-import { Switch, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import Layout from "./Layout";
-import ProjectInfo from "@components/Works/SingleProject/ProjectInfo";
-import NotFound from "@components/UI/404";
+import ProjectInfo from "components/Works/SingleProject/ProjectInfo";
+import NotFound from "components/UI/404";
 
-const Routes = () => {
+const Router = () => {
   return (
-    <div>
-      <Switch>
-        <Route path="/" exact component={Layout} />
-        <Route
-          path="/project/:id"
-          render={(routeProps) => (
-            <ProjectInfo data={routeProps.location.state} />
-          )}
-        />
-        <Route component={NotFound} />
-      </Switch>
-    </div>
+    <Routes>
+      <Route path="/" Component={Layout} />
+      <Route path="/project/:id" Component={(routeProps) => <ProjectInfo />} />
+      <Route Component={NotFound} />
+    </Routes>
   );
 };
 
-export default Routes;
+export default Router;

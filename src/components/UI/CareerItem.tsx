@@ -2,7 +2,7 @@ import React from "react";
 import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
 
-import Point from "@icons/point.png";
+import Point from "assets/icons/point.png";
 import Dot from "../../helpers/svg/dot";
 import { useSelector } from "react-redux";
 

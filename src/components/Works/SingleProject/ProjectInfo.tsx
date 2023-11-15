@@ -1,34 +1,34 @@
 import React, { useEffect, useState } from "react";
 import * as ReactDOMServer from "react-dom/server";
 
-import PageName from "@components/UI/PageName";
+import PageName from "components/UI/PageName";
 
-import Mobile from "@icons/mobile.png";
-import Web from "@icons/web.png";
-import Github from "@icons/github.png";
+import Mobile from "assets/icons/mobile.png";
+import Web from "assets/icons/web.png";
+import Github from "assets/icons/github.png";
 
 import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
 
-import TPM01 from "@images/TPM/01.jpg";
-import TPM02 from "@images/TPM/02.jpg";
-import TPM03 from "@images/TPM/03.jpg";
+import TPM01 from "assets/images/TPM/01.jpg";
+import TPM02 from "assets/images/TPM/02.jpg";
+import TPM03 from "assets/images/TPM/03.jpg";
 
-import MCity01 from "@images/MCity/01.png";
-import MCity02 from "@images/MCity/02.png";
-import MCity03 from "@images/MCity/03.png";
+import MCity01 from "assets/images/MCity/01.png";
+import MCity02 from "assets/images/MCity/02.png";
+import MCity03 from "assets/images/MCity/03.png";
 
-import Venue01 from "@images/Venue/01.png";
-import Venue02 from "@images/Venue/02.png";
-import Venue03 from "@images/Venue/03.png";
+import Venue01 from "assets/images/Venue/01.png";
+import Venue02 from "assets/images/Venue/02.png";
+import Venue03 from "assets/images/Venue/03.png";
 
-import Laravel01 from "@images/Laravel/01.png";
-import Laravel02 from "@images/Laravel/02.png";
-import Laravel03 from "@images/Laravel/03.png";
+import Laravel01 from "assets/images/Laravel/01.png";
+import Laravel02 from "assets/images/Laravel/02.png";
+import Laravel03 from "assets/images/Laravel/03.png";
 
-import StartupGrind01 from "@images/StartupGrind/01.png";
-import StartupGrind02 from "@images/StartupGrind/02.png";
-import StartupGrind03 from "@images/StartupGrind/03.png";
+import StartupGrind01 from "assets/images/StartupGrind/01.png";
+import StartupGrind02 from "assets/images/StartupGrind/02.png";
+import StartupGrind03 from "assets/images/StartupGrind/03.png";
 
 import data from "../../../data/data.json";
 
@@ -39,6 +39,7 @@ import useIsMobile from "../../../hooks/device";
 
 import Background from "../../../helpers/svg/background";
 import Arrow from "../../../helpers/svg/arrow";
+import { useLocation } from "react-router";
 
 const imagePaths = {
   TPM01,
@@ -58,8 +59,10 @@ const imagePaths = {
   StartupGrind03,
 };
 
-const ProjectInfo = (props) => {
-  const [mainImage, setMainImage] = useState(props.data.image);
+const ProjectInfo = () => {
+  const { state } = useLocation();
+
+  const [mainImage, setMainImage] = useState(state.image);
   const isMobile = useIsMobile();
 
   const theme = useSelector((state: any) => state.theme);
@@ -91,7 +94,7 @@ const ProjectInfo = (props) => {
       className="single_project"
       style={{ backgroundImage: `url("data:image/svg+xml,${svgString}")` }}
     >
-      <PageName name={props.data.title} />
+      <PageName name={state.title} />
 
       {isMobile ? null : (
         <div className="top_button back_button">
@@ -112,7 +115,7 @@ const ProjectInfo = (props) => {
               className="small_image_container"
               style={{
                 visibility:
-                  data.projects[props.data.id - 1].images.length == 0
+                  data.projects[state.id - 1].images.length == 0
                     ? "hidden"
                     : "visible",
               }}
@@ -122,7 +125,7 @@ const ProjectInfo = (props) => {
                   changeImage((target as HTMLImageElement).src, target)
                 }
                 src={imagePathParser(
-                  data.projects[props.data.id - 1].images[0]
+                  data.projects[state.id - 1].images[0]
                 )}
               />
               <img
@@ -130,7 +133,7 @@ const ProjectInfo = (props) => {
                   changeImage((target as HTMLImageElement).src, target)
                 }
                 src={imagePathParser(
-                  data.projects[props.data.id - 1].images[1]
+                  data.projects[state.id - 1].images[1]
                 )}
               />
               <img
@@ -138,7 +141,7 @@ const ProjectInfo = (props) => {
                   changeImage((target as HTMLImageElement).src, target)
                 }
                 src={imagePathParser(
-                  data.projects[props.data.id - 1].images[2]
+                  data.projects[state.id - 1].images[2]
                 )}
               />
             </div>
@@ -146,13 +149,13 @@ const ProjectInfo = (props) => {
 
           <Slide bottom>
             <div className="url_container">
-              <a href={data.projects[props.data.id - 1].url} target="_blank">
+              <a href={data.projects[state.id - 1].url} target="_blank">
                 <button
                   style={{
                     opacity:
-                      data.projects[props.data.id - 1].url == null ? 0.3 : 1,
+                      data.projects[state.id - 1].url == null ? 0.3 : 1,
                     cursor:
-                      data.projects[props.data.id - 1].url == null
+                      data.projects[state.id - 1].url == null
                         ? "default"
                         : "pointer",
                   }}
@@ -161,12 +164,12 @@ const ProjectInfo = (props) => {
                 </button>
               </a>
 
-              <a href={data.projects[props.data.id - 1].github} target="_blank">
+              <a href={data.projects[state.id - 1].github} target="_blank">
                 <img
-                  src={require(`@icons/${iconSetter(theme).github}`)}
+                  src={require(`assets/icons/${iconSetter(theme).github}`)}
                   style={{
                     opacity:
-                      data.projects[props.data.id - 1].github == null ? 0.3 : 1,
+                      data.projects[state.id - 1].github == null ? 0.3 : 1,
                   }}
                 />
               </a>
@@ -175,7 +178,7 @@ const ProjectInfo = (props) => {
         </div>
 
         {data.projects.map((i, index) => {
-          return i.id == props.data.id ? (
+          return i.id == state.id ? (
             <div key={index} className="info_container">
               <Fade duration={2500}>
                 <p>{i.description}</p>
@@ -186,7 +189,7 @@ const ProjectInfo = (props) => {
                   <span>
                     <p>Platform</p>
                     <img
-                      src={require(`../../../assets/icons/${
+                      src={require(`assets/icons/${
                         i.platform == "mobile"
                           ? iconSetter(theme).mobile
                           : iconSetter(theme).web

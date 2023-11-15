@@ -6,9 +6,9 @@ import { AppBar, Popper, Toolbar } from "@material-ui/core";
 import { connect, useDispatch, useSelector } from "react-redux";
 import { setColor, setDarkTheme, setLightTheme } from "../../redux/actions";
 
-import Moon from "@icons/moon.png";
-import Sun from "@icons/sun.png";
-import ColorPicker from "@icons/color-picker.png";
+import Moon from "assets/icons/moon.png";
+import Sun from "assets/icons/sun.png";
+import ColorPicker from "assets/icons/color-picker.png";
 
 const WebMenu = (props) => {
   const [openPicker, setOpenPicker] = useState(false);
@@ -19,17 +19,17 @@ const WebMenu = (props) => {
   const colorPickerRef = useRef(null);
   const containerRef = useRef(null);
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 0) {
-        containerRef.current.classList.remove("navbar_fadeIn");
-        containerRef.current.classList.add("navbar_fadeOut");
-        return;
-      }
-      containerRef.current.classList.remove("navbar_fadeOut");
-      containerRef.current.classList.add("navbar_fadeIn");
-    });
-  }, [containerRef.current]);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     if (window.scrollY > 0) {
+  //       containerRef.current.classList.remove("navbar_fadeIn");
+  //       containerRef.current.classList.add("navbar_fadeOut");
+  //       return;
+  //     }
+  //     containerRef.current.classList.remove("navbar_fadeOut");
+  //     containerRef.current.classList.add("navbar_fadeIn");
+  //   });
+  // }, [containerRef.current]);
 
   const openColorPicker = () => {
     setOpenPicker(!openPicker);

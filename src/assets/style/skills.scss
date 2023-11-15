@@ -7,24 +7,39 @@
   padding-top: 50px;
   box-sizing: border-box;
   overflow: auto;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
+  display: flex;
+  flex-direction: column;
+  // box-shadow: 0px 0px 15px 5px var(--accent-color);
+  overflow: hidden;
+  background-image: url("../images/shape3.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .skills_container {
-  width: 100%;
-  margin-top: 150px;
-  margin-bottom: 150px;
+  width: 90%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 15px 30px;
+  box-sizing: border-box;
   display: flex;
-  flex-direction: row;
+  // flex-direction: row;
+  flex-direction: column;
+  align-self: center;
   justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
+  align-items: flex-start;
+  gap: 40px;
+  overflow-x: scroll;
 
-.skill_row {
-  overflow: hidden;
+  .skill_col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
 }
 
 /* Skill Indicator */
@@ -43,6 +58,7 @@
 
 .indicator_label p {
   color: var(--light-grey);
+  font-family: var(--Glitch);
   font-size: 21px;
   font-weight: 500;
 }
@@ -51,15 +67,15 @@
   width: 550px;
   height: 18px;
   background: var(--indicator-bg);
-  border-radius: 20px;
   overflow: hidden;
+  transform: skewX(-30deg);
 }
 
 .indicator_line span {
   height: 100%;
   display: block;
   background: var(--accent-color);
-  border-radius: 20px;
+  box-shadow: 0px 0px 15px 5px black;
 }
 
 @media screen and (max-width: 640px) {
@@ -79,5 +95,35 @@
 
   .indicator_label {
     text-align: left;
+  }
+}
+
+.skill-item {
+  width: 180px;
+  height: 180px;
+  background: var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  overflow: visible;
+  box-shadow: 0px 0px 10px 5px #0000002a;
+
+  img {
+    width: 90px;
+  }
+
+  span {
+    color: var(--light-grey);
+    font-size: 20px;
+    font-family: var(--Glitch);
+    letter-spacing: 1.5px;
+  }
+
+  &:hover {
+    transition: 0.3s;
+    // box-shadow: 0px 0px 10px 5px var(--accent-color);
+    transform: scale(1.05);
   }
 }

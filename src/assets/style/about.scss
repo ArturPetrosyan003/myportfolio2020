@@ -7,9 +7,9 @@
   padding-top: 50px;
   box-sizing: border-box;
   overflow: hidden;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
+  // box-shadow: 0px 0px 15px 5px var(--accent-color);
 }
 
 .about_container {
@@ -19,37 +19,48 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  position: relative;
 
-.about_container .about_content {
-  width: 50%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 25px 15px;
-  border-radius: 35px 10px;
-  border: 5px solid var(--accent-color);
+  .about_content {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 15px;
 
-  p {
-    font-size: 22px;
-    width: 700px;
-    font-weight: lighter;
-    span {
+    .shape {
+      height: 85vh;
+      position: absolute;
+      top: 100px;
+      margin-left: -70px;
+      z-index: -1;
+    }
+
+    .profile-pic {
+      height: 100vh;
+      margin-top: -100px;
+      filter: drop-shadow(10px 10px 35px black);
+    }
+
+    h1 span {
       color: var(--accent-color);
     }
+
+    p {
+      letter-spacing: 2px;
+      font-size: 24px;
+      width: 50vw;
+      font-weight: lighter;
+      font-family: var(--Glitch);
+      text-align: right;
+
+      span {
+        letter-spacing: 2px;
+        color: var(--accent-color);
+        font-family: var(--Glitch);
+      }
+    }
   }
-}
-
-.about_container .about_content h1 span {
-  color: var(--accent-color);
-}
-
-.about_container img {
-  width: 240px;
-  height: 240px;
-  object-fit: cover;
 }
 
 @media screen and (max-width: 640px) {

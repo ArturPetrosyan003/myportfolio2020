@@ -9,11 +9,11 @@
   box-sizing: border-box;
   padding-top: 50px;
   position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
+  overflow: hidden;
 
   .wrapper {
-    padding-right: 150px;
     padding-left: 150px;
   }
 }
@@ -26,57 +26,85 @@
   justify-content: space-between;
   overflow: hidden;
   margin-top: 100px;
-}
+  overflow: visible;
+  position: relative;
 
-.home_container h1 {
-  color: var(--white);
-  font-size: 50px;
-}
+  h1 {
+    color: var(--white);
+    font-size: 60px;
+    font-family: var(--Glitch);
+    letter-spacing: 5px;
+    line-height: 1.3;
+    text-shadow: 0px 5px 8px black;
 
-@mixin typingSection($left-offset) {
-  .home_container h1 span {
-    color: var(--accent-color);
-
-    &::after {
-      content: "";
-      display: block;
-      width: 30%;
-      height: 46px;
-      background: var(--dark-grey);
-      border-left: 3px solid var(--accent-color);
-      position: absolute;
-      top: 27%;
-      left: $left-offset;
-      animation: typing 1s 1s steps(10) forwards,
-        pulsing 0.7s 3s linear alternate infinite;
+    span {
+      color: var(--accent-color);
+      font-family: Glitch;
+      letter-spacing: 5px;
+      text-shadow: 0px 5px 8px rgb(0, 0, 0);
     }
   }
 
-  @keyframes typing {
-    100% {
-      left: calc($left-offset + 32%);
-      margin: 0 -35px 0 -35px;
-    }
+  .profile_image {
+    height: 100vh;
+    position: absolute;
+    right: 70px;
+    top: -70px;
+    filter: drop-shadow(-10px 10px 35px black);
+  }
+
+  .shape {
+    height: 100vh;
+    position: absolute;
+    right: 40px;
+    top: -50px;
+    z-index: -1;
+  }
+
+  .smoke {
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: -300px;
+    z-index: -1;
+    animation: smoke 1.2s linear forwards;
   }
 }
 
-@keyframes pulsing {
-  100% {
-    opacity: 0;
-  }
-}
+// @mixin typingSection($left-offset) {
+//   .home_container h1 span {
+//     color: var(--accent-color);
 
-@include typingSection($left-offset: 12%);
+//     &::after {
+//       content: "";
+//       display: block;
+//       width: 30%;
+//       height: 60px;
+//       background: var(--dark-grey);
+//       border-left: 3px solid var(--accent-color);
+//       position: absolute;
+//       top: 23%;
+//       left: $left-offset;
+//       animation: typing 1s 1s steps(10) forwards,
+//         pulsing 0.7s 3s linear alternate infinite;
+//     }
+//   }
 
-.home_container img {
-  width: 320px;
-  height: 320px;
-  object-fit: cover;
-  border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
+//   @keyframes typing {
+//     100% {
+//       left: calc($left-offset + 32%);
+//       margin: 0 -35px 0 -35px;
+//     }
+//   }
+// }
+
+// @keyframes pulsing {
+//   100% {
+//     opacity: 0;
+//   }
+// }
+
+// @include typingSection($left-offset: 12%);
 
 .contact_button {
   width: 170px;
@@ -85,10 +113,20 @@
   background: transparent;
   border: 2px solid var(--accent-color);
   font-size: 22px;
-  font-family: var(--Ubuntu);
   font-weight: 700;
-  border-radius: 25px;
   box-shadow: none;
+  transform: skewX(-30deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slide 1s ease;
+  box-shadow: 0px 0px 20px 0px var(--accent-color), 0px 0px 5px 0px var(--accent-color) inset;
+
+  span {
+    display: block;
+    font-family: var(--Glitch);
+    transform: skewX(30deg);
+  }
 
   &::after {
     content: "";
@@ -104,7 +142,6 @@
     margin-right: auto;
     z-index: -1;
     transition: 0.5s;
-    border-radius: 25px;
   }
 
   &:hover {
@@ -122,21 +159,46 @@
 
   a {
     overflow: hidden;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0px 0px 20px 0px var(--accent-color);
+    border-radius: 50%;
+    transition: 0.2s;
+
+    &:hover {
+      transform: translateY(5px);
+    }
   }
 }
 
 #home .icon_container .icon {
-  width: 45px;
-  height: 45px;
-  transition: 0.2s;
+  width: 100%;
+  height: 100%;
+}
 
-  &:hover {
-    transform: translateY(5px);
+@keyframes slide {
+  0% {
+    transform: translateX(150px) skewX(-30deg);
+  }
+
+  100% {
+    transform: translateX(0px) skewX(-30deg);
+  }
+}
+
+@keyframes smoke {
+  0% {
+    transform: translateX(-100vw);
+  }
+
+  100% {
+    transform: translateX(100vw);
+    display: none;
   }
 }
 
 @media screen and (max-width: 640px) {
-  @include typingSection($left-offset: 44%);
+  // @include typingSection($left-offset: 44%);
 
   #home {
     height: 100%;
