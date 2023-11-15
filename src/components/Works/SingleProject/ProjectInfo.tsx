@@ -1,34 +1,34 @@
 import React, { useEffect, useState } from "react";
 import * as ReactDOMServer from "react-dom/server";
 
-import PageName from "@components/UI/PageName";
+import PageName from "components/UI/PageName";
 
-import Mobile from "@icons/mobile.png";
-import Web from "@icons/web.png";
-import Github from "@icons/github.png";
+import Mobile from "assets/icons/mobile.png";
+import Web from "assets/icons/web.png";
+import Github from "assets/icons/github.png";
 
 import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
 
-import TPM01 from "@images/TPM/01.jpg";
-import TPM02 from "@images/TPM/02.jpg";
-import TPM03 from "@images/TPM/03.jpg";
+import TPM01 from "assets/images/TPM/01.jpg";
+import TPM02 from "assets/images/TPM/02.jpg";
+import TPM03 from "assets/images/TPM/03.jpg";
 
-import MCity01 from "@images/MCity/01.png";
-import MCity02 from "@images/MCity/02.png";
-import MCity03 from "@images/MCity/03.png";
+import MCity01 from "assets/images/MCity/01.png";
+import MCity02 from "assets/images/MCity/02.png";
+import MCity03 from "assets/images/MCity/03.png";
 
-import Venue01 from "@images/Venue/01.png";
-import Venue02 from "@images/Venue/02.png";
-import Venue03 from "@images/Venue/03.png";
+import Venue01 from "assets/images/Venue/01.png";
+import Venue02 from "assets/images/Venue/02.png";
+import Venue03 from "assets/images/Venue/03.png";
 
-import Laravel01 from "@images/Laravel/01.png";
-import Laravel02 from "@images/Laravel/02.png";
-import Laravel03 from "@images/Laravel/03.png";
+import Laravel01 from "assets/images/Laravel/01.png";
+import Laravel02 from "assets/images/Laravel/02.png";
+import Laravel03 from "assets/images/Laravel/03.png";
 
-import StartupGrind01 from "@images/StartupGrind/01.png";
-import StartupGrind02 from "@images/StartupGrind/02.png";
-import StartupGrind03 from "@images/StartupGrind/03.png";
+import StartupGrind01 from "assets/images/StartupGrind/01.png";
+import StartupGrind02 from "assets/images/StartupGrind/02.png";
+import StartupGrind03 from "assets/images/StartupGrind/03.png";
 
 import data from "../../../data/data.json";
 
@@ -163,7 +163,7 @@ const ProjectInfo = (props) => {
 
               <a href={data.projects[props.data.id - 1].github} target="_blank">
                 <img
-                  src={require(`@icons/${iconSetter(theme).github}`)}
+                  src={require(`assets/icons/${iconSetter(theme).github}`)}
                   style={{
                     opacity:
                       data.projects[props.data.id - 1].github == null ? 0.3 : 1,
@@ -186,7 +186,7 @@ const ProjectInfo = (props) => {
                   <span>
                     <p>Platform</p>
                     <img
-                      src={require(`../../../assets/icons/${
+                      src={require(`assets/icons/${
                         i.platform == "mobile"
                           ? iconSetter(theme).mobile
                           : iconSetter(theme).web

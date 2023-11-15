@@ -7,7 +7,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("../images/contact-bg.png");
+  background-image: url("../../assets/images/contact-bg.svg");
   background-size: cover;
   background-position: center;
 
@@ -88,10 +88,11 @@
   color: white;
   background: var(--accent-color);
   font-size: 24px;
-  font-family: var(--Anton);
-  letter-spacing: 1.2px;
+  font-family: var(--Glitch2);
+  font-weight: 700;
+  letter-spacing: 1.5px;
   text-align: center;
-  padding-top: 11px;
+  padding-top: 18px;
   box-sizing: border-box;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;

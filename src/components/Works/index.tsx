@@ -1,25 +1,31 @@
 import React, { Component } from "react";
 
-import SingleProject from "@components/UI/SingleProject";
-import PageName from "@components/UI/PageName";
+import SingleProject from "components/UI/SingleProject";
+import PageName from "components/UI/PageName";
 
-import TPM from "@images/TPM.png";
-import MCity from "@images/m_city.png";
-import Venue from "@images/the_venue.png";
-import Laravel from "@images/laravel.png";
-import Startups from "@images/startups.png";
-import Mazer from "@images/mazer.png";
+import TPM from "assets/images/TPM.png";
+import MCity from "assets/images/m_city.png";
+import Venue from "assets/images/the_venue.png";
+import Laravel from "assets/images/laravel.png";
+import Startups from "assets/images/startups.png";
+import Mazer from "assets/images/mazer.png";
 
 import Fade from "react-reveal/Fade";
 import Divider from "../../helpers/svg/divider";
+import { useScroll, animated } from "@react-spring/web";
 
 const Works = () => {
+  const { scrollYProgress } = useScroll({});
+
   return (
-    <>
+    <animated.div
+      /*  @ts-ignore */
+      style={{ opacity: scrollYProgress.to((val) => val * 6 - 2.4) }}
+    >
       <div id="projects">
-        <div className="divider">
+        {/* <div className="divider">
           <Divider />
-        </div>
+        </div> */}
         <PageName name="Projects" />
 
         <div className="projects_container">
@@ -29,16 +35,15 @@ const Works = () => {
           <SingleProject id={2} title="Man City WebSite" image={MCity} />
           <SingleProject id={3} title="The Venue" image={Venue} />
           <SingleProject id={4} title="Shop Prototype" image={Laravel} />
-
-          <Fade>
-            <h3>
-              Some projects are not listed because of some issues however they
-              can be shown.
-            </h3>
-          </Fade>
         </div>
+        {/* <Fade>
+          <h3>
+            Some projects are not listed because of some issues however they can
+            be shown.
+          </h3>
+        </Fade> */}
       </div>
-    </>
+    </animated.div>
   );
 };
 

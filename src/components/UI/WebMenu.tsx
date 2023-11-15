@@ -6,9 +6,9 @@ import { AppBar, Popper, Toolbar } from "@material-ui/core";
 import { connect, useDispatch, useSelector } from "react-redux";
 import { setColor, setDarkTheme, setLightTheme } from "../../redux/actions";
 
-import Moon from "@icons/moon.png";
-import Sun from "@icons/sun.png";
-import ColorPicker from "@icons/color-picker.png";
+import Moon from "assets/icons/moon.png";
+import Sun from "assets/icons/sun.png";
+import ColorPicker from "assets/icons/color-picker.png";
 
 const WebMenu = (props) => {
   const [openPicker, setOpenPicker] = useState(false);

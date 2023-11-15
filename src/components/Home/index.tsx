@@ -1,7 +1,8 @@
-import React, { Component, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
-import ProfileImage from "@images/hero.png";
-import Shape from "@images/shape.svg";
+import ProfileImage from "assets/images/hero.png";
+import Shape from "assets/images/shape.svg";
+import Smoke from "assets/images/smoke.png";
 
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
@@ -29,16 +30,16 @@ const Home = () => {
           <Slide right duration={1500}>
             <img className="shape" src={Shape} alt="" />
           </Slide>
+
+          <img className="smoke" src={Smoke} alt="" />
         </div>
 
-        <Slide right duration={1000}>
-          <button
-            className="contact_button"
-            onClick={() => (window.location.href = "/#contact")}
-          >
-            Contact
-          </button>
-        </Slide>
+        <button
+          className="contact_button"
+          onClick={() => (window.location.href = "/#contact")}
+        >
+          <span>Contact</span>
+        </button>
 
         <Zoom duration={1000}>
           <div className="icon_container">
@@ -48,28 +49,28 @@ const Home = () => {
             >
               <img
                 className="icon"
-                src={require(`@icons/${iconSetter(theme).facebook}`)}
+                src={require(`assets/icons/${iconSetter(theme).facebook}`)}
               />
             </a>
 
             <a target="_blank" href="https://www.instagram.com/ar2r_p003">
               <img
                 className="icon"
-                src={require(`@icons/${iconSetter(theme).instagram}`)}
+                src={require(`assets/icons/${iconSetter(theme).instagram}`)}
               />
             </a>
 
             <a target="_blank" href="https://github.com/ArturPetrosyan003">
               <img
                 className="icon"
-                src={require(`@icons/${iconSetter(theme).github}`)}
+                src={require(`assets/icons/${iconSetter(theme).github}`)}
               />
             </a>
 
             <a target="_blank" href="https://linkedin.com/in/ar2r-p003">
               <img
                 className="icon"
-                src={require(`@icons/${iconSetter(theme).linkedin}`)}
+                src={require(`assets/icons/${iconSetter(theme).linkedin}`)}
               />
             </a>
           </div>

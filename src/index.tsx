@@ -1,23 +1,25 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Routes from "./routes";
+import { createRoot } from "react-dom/client";
 
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
+import { legacy_createStore, applyMiddleware } from "redux";
 import { rootReducer } from "./redux/rootReducer";
 import logger from "redux-logger";
 
-const store = createStore(rootReducer, applyMiddleware(logger));
+const store = legacy_createStore(rootReducer, applyMiddleware(logger));
 
 const App = () => {
-    return (
-        <Provider store={store}>
-            <BrowserRouter>
-                <Routes />
-            </BrowserRouter>
-        </Provider>
-    );
+  return (
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
+    </Provider>
+  );
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<App />);

@@ -9,7 +9,7 @@
   box-sizing: border-box;
   padding-top: 50px;
   position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   overflow: hidden;
 
@@ -60,6 +60,15 @@
     top: -50px;
     z-index: -1;
   }
+
+  .smoke {
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: -300px;
+    z-index: -1;
+    animation: smoke 1.2s linear forwards;
+  }
 }
 
 // @mixin typingSection($left-offset) {
@@ -104,11 +113,19 @@
   background: transparent;
   border: 2px solid var(--accent-color);
   font-size: 22px;
-  font-family: var(--Glitch);
   font-weight: 700;
-  border-radius: 25px;
   box-shadow: none;
-  transform: skewY(45deg);
+  transform: skewX(-30deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slide 1s ease;
+
+  span {
+    display: block;
+    font-family: var(--Glitch);
+    transform: skewX(30deg);
+  }
 
   &::after {
     content: "";
@@ -124,7 +141,6 @@
     margin-right: auto;
     z-index: -1;
     transition: 0.5s;
-    border-radius: 25px;
   }
 
   &:hover {
@@ -142,16 +158,41 @@
 
   a {
     overflow: hidden;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0px 0px 10px 5px var(--accent-color);
+    border-radius: 50%;
+    transition: 0.2s;
+
+    &:hover {
+      transform: translateY(5px);
+    }
   }
 }
 
 #home .icon_container .icon {
-  width: 45px;
-  height: 45px;
-  transition: 0.2s;
+  width: 100%;
+  height: 100%;
+}
 
-  &:hover {
-    transform: translateY(5px);
+@keyframes slide {
+  0% {
+    transform: translateX(150px) skewX(-30deg);
+  }
+
+  100% {
+    transform: translateX(0px) skewX(-30deg);
+  }
+}
+
+@keyframes smoke {
+  0% {
+    transform: translateX(-100vw);
+  }
+
+  100% {
+    transform: translateX(100vw);
+    display: none;
   }
 }
 

@@ -3,7 +3,7 @@
   xmlns:xlink="http://www.w3.org/1999/xlink"
   viewBox="0 0 208.59 199.54"
 ><defs><style
-    >.cls-1,.cls-4,.cls-5,.cls-6{fill:none;stroke-miterlimit:10;}.cls-1,.cls-4{stroke-width:2px;}.cls-1{stroke:url(#linear-gradient);}.cls-2{fill:url(#linear-gradient-2);}.cls-3{fill:url(#linear-gradient-3);}.cls-4,.cls-5,.cls-6{stroke:#fff;}.cls-5{stroke-width:3px;}.cls-6{stroke-width:4px;}</style><linearGradient
+    >.cls-1,.cls-4,.cls-5,.cls-6{fill:none;stroke-miterlimit:10;}.cls-1,.cls-4{strokeWidth:2px;}.cls-1{stroke:url(#linear-gradient);}.cls-2{fill:url(#linear-gradient-2);}.cls-3{fill:url(#linear-gradient-3);}.cls-4,.cls-5,.cls-6{stroke:#fff;}.cls-5{strokeWidth:3px;}.cls-6{strokeWidth:4px;}</style><linearGradient
       id="linear-gradient"
       x1="55.64"
       y1="50.67"
